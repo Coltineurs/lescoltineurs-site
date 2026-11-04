@@ -105,6 +105,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "/css" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/js": "/js" });
   eleventyConfig.addPassthroughCopy({
     "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2": "/fonts/fraunces-latin-wght-normal.woff2",
     "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-italic.woff2": "/fonts/fraunces-latin-wght-italic.woff2",

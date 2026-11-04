@@ -39,6 +39,8 @@ export default {
   ],
   // Bandeau d'annonce facultatif (ouverture exceptionnelle, fermeture…). Vide = pas de bandeau.
   annonce: "",
+  // Balise Google Ads (mesure des campagnes). Chargée uniquement après consentement.
+  googleAds: "AW-16675057976",
   navigation: [
     { titre: "Menu", url: "/menu/" },
     { titre: "Carte des vins", url: "/carte-des-vins/" },

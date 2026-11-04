@@ -263,3 +263,19 @@ p { margin: 0 0 1em; }
   body { background: #fff; }
   .carte { border: 0; padding: 0; }
 }
+
+/* Bandeau de consentement aux cookies */
+.lien { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+.consentement {
+  position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 20;
+  max-width: 34rem; margin-left: auto;
+  background: var(--papier); color: var(--encre);
+  border: 1px solid var(--filet); border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  padding: 1.1rem 1.25rem; font-size: 0.95rem;
+}
+.consentement[hidden] { display: none; }
+.consentement p { margin: 0 0 0.9rem; }
+.consentement__boutons { display: flex; gap: 0.6rem; justify-content: flex-end; flex-wrap: wrap; }
+.consentement .bouton { font: inherit; cursor: pointer; background: var(--papier); padding: 0.55rem 1.3rem; }
+.consentement .bouton:hover { background: var(--vert); color: var(--creme); }
