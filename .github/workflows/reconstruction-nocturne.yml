@@ -1,0 +1,20 @@
+# Reconstruit le site chaque nuit pour relire le Google Sheet (menu et vins).
+# Le secret NETLIFY_BUILD_HOOK contient l'URL d'un « build hook » Netlify
+# (Site configuration → Build & deploy → Build hooks).
+name: Reconstruction nocturne
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # 3h UTC = 4h (hiver) / 5h (été) à Paris
+  workflow_dispatch: {}    # bouton « Run workflow » pour lancer à la main
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Déclencher le build Netlify
+        env:
+          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "Secret NETLIFY_BUILD_HOOK manquant"; exit 1; fi
+          curl -fsS -X POST -d '{}' "$HOOK"

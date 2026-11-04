@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Menu
+permalink: /menu/
+description: "Le menu des Coltineurs, bistrot français à Paris 16e : entrées, poissons, viandes, fromages et desserts de saison. Mis à jour chaque jour."
+ogImage: plat-ris-de-veau-morilles.jpg
+jsonld: menu
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">À la carte</p>
+  <h1>Le menu</h1>
+  <p class="chapo">La carte évolue au gré des saisons et des arrivages. Une question sur un plat ou un allergène ? Demandez-nous.</p>
+</header>
+
+<div class="conteneur etroit">
+  <ul class="sommaire" aria-label="Rubriques du menu">
+    {%- for c in menu.categories %}<li><a href="#{{ c.id }}">{{ c.nom }}</a></li>{% endfor %}
+  </ul>
+
+  <div class="carte">
+    {%- for c in menu.categories %}
+    <section class="carte__categorie" id="{{ c.id }}" aria-labelledby="t-{{ c.id }}">
+      <h2 id="t-{{ c.id }}">{{ c.nom }}</h2>
+      {%- for s in c.sousCategories %}
+      <div class="carte__groupe">
+        {% if s.nom %}<h3>{{ s.nom }}</h3>{% endif %}
+        <ul class="plats">
+          {%- for p in s.plats %}
+          <li class="plat">
+            <span class="plat__nom">{{ p.nom }}</span>
+            <span class="plat__prix">{{ p.prix }}</span>
+            {% if p.detail %}<p class="plat__detail">{{ p.detail }}</p>{% endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </section>
+    {%- endfor %}
+    <p class="carte__note">Prix nets en euros, service compris. La liste des allergènes est à votre disposition sur demande.</p>
+  </div>
+
+  <div class="boutons" style="justify-content:center; margin: 2.5rem 0 4rem;">
+    <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
+    <a class="bouton" href="/carte-des-vins/">La carte des vins</a>
+  </div>
+</div>

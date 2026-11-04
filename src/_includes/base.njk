@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- set pageTitle = (title + " · " + site.nom) if title else (site.nom + " · " + site.slogan) %}
+  {%- set pageDescription = description or site.description %}
+  {%- set canonical = page.url | absolute(site.url) %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  <link rel="canonical" href="{{ canonical }}">
+  {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="{{ site.nom }}">
+  <meta property="og:title" content="{{ title or site.nom }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ (ogImage or 'salle-interieur.jpg') | imageUrlSync | absolute(site.url) }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#014433">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/work-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  {%- if jsonld == "restaurant" %}{% set ld = schema %}{% elif jsonld == "menu" %}{% set ld = menu | menuSchema %}{% elif jsonld == "vins" %}{% set ld = vins | vinsSchema %}{% endif %}
+  {% if ld %}<script type="application/ld+json">{{ ld | json | safe }}</script>{% endif %}
+</head>
+<body class="page-{{ bodyClass or 'interieure' }}">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  {% if site.annonce %}<p class="annonce">{{ site.annonce }}</p>{% endif %}
+  <header class="entete">
+    <div class="entete__inner">
+      <a class="entete__logo" href="/" aria-label="{{ site.nom }}, accueil">
+        <img src="{{ 'logo.jpg' | imageUrlSync(600) }}" alt="" width="64" height="64">
+        <span>Les Coltineurs</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
+        <label for="nav-toggle" class="nav__burger"><span class="sr">Ouvrir le menu</span><span aria-hidden="true"></span></label>
+        <ul class="nav__liste">
+          {%- for item in site.navigation %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.titre }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+      <a class="bouton bouton--plein entete__reserver" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    {{ content | safe }}
+  </main>
+
+  <footer class="pied">
+    <div class="pied__inner">
+      <div class="pied__bloc">
+        <p class="pied__nom">Les Coltineurs</p>
+        <p>Restaurant parisien de quartier.<br>Cuisine traditionnelle française dans le XVIᵉ arrondissement.</p>
+      </div>
+      <div class="pied__bloc">
+        <h2>Nous trouver</h2>
+        <address>
+          <a href="{{ site.carte }}" rel="noopener">{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}</a><br>
+          <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a>
+        </address>
+      </div>
+      <div class="pied__bloc">
+        <h2>Horaires</h2>
+        <p>Du mardi au samedi<br>12h – 14h30 · 18h30 – 23h<br>Fermé dimanche et lundi</p>
+      </div>
+      <div class="pied__bloc">
+        <h2>Suivez-nous</h2>
+        <p><a href="{{ site.instagram }}" rel="noopener">Instagram @lescoltineurs</a><br>
+        <a href="{{ site.cafeSanFrancisco }}" rel="noopener">Notre maison sœur : le Café San Francisco</a></p>
+      </div>
+    </div>
+    <p class="pied__legal"><a href="/mentions-legales/">Mentions légales</a> · © {{ "now" | annee }} Les Coltineurs</p>
+  </footer>
+</body>
+</html>

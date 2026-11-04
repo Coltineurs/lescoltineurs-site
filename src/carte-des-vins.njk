@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: Carte des vins
+permalink: /carte-des-vins/
+description: "La carte des vins des Coltineurs (Paris 16e) : champagnes, vins nature et de petits vignerons de Loire, Bourgogne, Beaujolais, Rhône et Languedoc."
+ogImage: illustration-salle-aquarelle.jpg
+jsonld: vins
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">La cave</p>
+  <h1>La carte des vins</h1>
+  <p class="chapo">Exclusivement de petits vignerons qui prennent soin de respecter une agriculture et une vinification saines. Le respect de la terre et du terroir, jusque dans les verres.</p>
+</header>
+
+<div class="conteneur etroit">
+  <ul class="sommaire" aria-label="Rubriques de la carte des vins">
+    {%- for c in vins.categories %}<li><a href="#{{ c.id }}">{{ c.nom }}</a></li>{% endfor %}
+  </ul>
+
+  <div class="carte">
+    {%- for c in vins.categories %}
+    <section class="carte__categorie" id="{{ c.id }}" aria-labelledby="t-{{ c.id }}">
+      <h2 id="t-{{ c.id }}">{{ c.nom }}</h2>
+      {%- for r in c.regions %}
+      <div class="carte__groupe">
+        {% if r.nom %}<h3>{{ r.nom }}</h3>{% endif %}
+        {%- for s in r.secteurs %}
+        {% if s.nom and s.nom != r.nom %}<p class="carte__secteur">{{ s.nom }}</p>{% endif %}
+        <ul class="plats">
+          {%- for v in s.vins %}
+          <li class="plat">
+            <span class="plat__nom">{{ v.domaine }}{% if v.domaine and v.cuvee %} · {% endif %}{{ v.cuvee }}{% if v.contenance %} ({{ v.contenance }}){% endif %}</span>
+            <span class="plat__prix">{{ v.prix }}</span>
+            <p class="plat__detail">{% if v.appellation %}<span>{{ v.appellation }}</span>{% endif %}{% if v.cepages %}<span>{{ v.cepages }}</span>{% endif %}{% if v.millesime %}<span>{{ v.millesime }}</span>{% endif %}{% if v.detail %}<span>{{ v.detail }}</span>{% endif %}</p>
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- endfor %}
+      </div>
+      {%- endfor %}
+    </section>
+    {%- endfor %}
+    <p class="carte__note">Prix nets en euros, service compris. Bouteilles de 75 cl sauf mention.<br>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+  </div>
+
+  <div class="boutons" style="justify-content:center; margin: 2.5rem 0 4rem;">
+    <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
+    <a class="bouton" href="/menu/">Le menu</a>
+  </div>
+</div>

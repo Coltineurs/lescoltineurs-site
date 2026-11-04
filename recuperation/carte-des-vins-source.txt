@@ -1,0 +1,184 @@
+# Transcription de la carte des vins (Google Slides « Carte des Vins Les Coltineurs »), 4 novembre 2026
+# Format : Domaine | Cuvée | Appellation | Cépages | Millésime | Détail | Contenance | Prix
+# Mention de bas de page : Prix nets en euros / Service compris / Bouteilles de 75 cl sauf mention
+
+# Bulles
+## Champagne
+Frerejean Frères | Brut Grande Réserve | AOC Champagne | 50% Chardonnay, 30% Pinot Noir, 20% Meunier |  |  |  | 79
+Franck Bonville | Brut Grand Cru Blanc de Blancs | AOC Champagne Grand Cru | 100% Chardonnay |  |  |  | 98
+Champagne Chavost | Brut Nature “Blanc de Meunier” | AOC Champagne | 100% Meunier |  |  |  | 108
+## Beaujolais
+Richard Rottiers | Manganèse | Vin de France | Gamay | 2023 |  |  | 32
+## Loire
+Arnaud Lambert | Crémant de Loire Brut | AOC Crémant de Loire | Chenin |  |  |  | 38
+## Italie
+Tasi | Rosé | DOC Prosecco rosé | 90% Glera, 10% Pinot Noir | 2020 |  |  | 32
+Tasi | Vino Spumante Brut | DOC Prosecco blanc | Garganega | 2022 |  |  | 36
+Alla Costiera | Bianco sui Lieviti | Vino Frizzante | Moscato, Garganega | 2018 |  |  | 38
+
+# Macérations
+## Alsace
+Clé de Sol | Pinot Gris | AOC Alsace | 100% Pinot Gris | 2020 | 4 jours de macération |  | 42
+Clé de Sol | Gewurztraminer Muehlforst | AOC Alsace | 100% Gewurztraminer | 2018 | 28 jours de macération |  | 58
+## Italie
+Domaine Casè | Casèbianco | Vino da tavola | Malvasia di Candia, Marsanne, Ortrugo, Moscato Giallo |  | 8 jours de macération |  | 45
+
+# Rosés
+## Provence
+Château La Mascaronne | Côtes de Provence | AOC Côtes de Provence | Grenache, Cinsault, Syrah, Rolle |  |  |  | 37
+Complices des Calanques | Coteaux d’Aix-en-Provence | AOC Coteaux d’Aix-en-Provence | Grenache, Syrah, Cabernet Sauvignon | 2024 |  |  | 36
+## Rhône
+Domaine de Piéblanc | “Coccinelle” | AOC Ventoux | 80% Cinsault, 20% Grenache | 2025 |  |  | 37
+
+# Blancs
+## Loire
+### Pays nantais
+Complices de Loire | Brise Minérale | AOC Muscadet Sèvre et Maine | 100% Melon de Bourgogne | 2025 |  |  | 33
+Domaine de la Pépière | Muscadet | AOC Muscadet | 100% Melon de Bourgogne | 2025 |  |  | 36
+### Anjou-Saumur
+Domaine de la Bergerie | “Sous la Tonnelle” | AOC Anjou | Chenin | 2025 |  |  | 35
+Arnaud Lambert | Saumur “Brézé Midi” | AOC Saumur | 100% Chenin | 2024 |  |  | 45
+Arnaud Lambert | Saumur Brézé “La Rue” | AOC Saumur | 100% Chenin | 2018 |  |  | 87
+Domaine de la Bergerie | Quarts de Chaume Grand Cru | AOC Coteaux du Layon | 100% Chenin | 2015 |  |  | 73
+### Touraine
+Complices de Loire | Les Deux Terroirs | Vin de France | Sauvignon |  |  |  | 30
+### Centre-Loire
+Vincent Gaudry | Sancerre “Le Tournebride” | AOC Sancerre | Sauvignon Blanc | 2023 |  |  | 72
+Domaine François Crochet | Sancerre “Le Chêne Marchand” | AOC Sancerre | Sauvignon Blanc | 2023 |  |  | 82
+François Cotat | Sancerre “La Grande Côte” | AOC Sancerre | Sauvignon Blanc | 2025 |  |  | 120
+## Provence
+Château Virant | Cuvée Eric Verdier | AOC Coteaux d’Aix-en-Provence | Rolle | 2022 |  |  | 66
+## Jura
+Hubert Thibaut | Savagnin | AOC Côtes du Jura | 100% Savagnin | 2022 |  |  | 54
+## Bourgogne
+### Chablis
+Domaine d’Élise | Chablis | AOC Chablis | Chardonnay | 2025 |  |  | 61
+### Côte de Beaune
+Chavy-Chouet | Meursault “Corvées de Citeaux” | AOC Meursault | Chardonnay | 2024 |  |  | 117
+Dominique Laurent | Meursault 1er Cru “Poruzots” Vieilles Vignes | AOC Meursault 1er Cru | Chardonnay | 2022 |  |  | 125
+Dominique Laurent | Meursault 1er Cru “Poruzots” Vieilles Vignes | AOC Meursault 1er Cru | Chardonnay | 2010 |  |  | 207
+Gagnard-Delagrange | Chassagne-Montrachet 1er Cru “Boudriotte” | AOC Chassagne-Montrachet 1er Cru | Chardonnay | 2023 |  |  | 120
+Blain-Gagnard | Chassagne-Montrachet 1er Cru “Caillerets” | AOC Chassagne-Montrachet 1er Cru | Chardonnay | 2024 |  |  | 168
+Le Grappin | Beaune 1er Cru “Les Grèves” | AOC Beaune 1er Cru | Chardonnay | 2023 |  |  | 144
+Joseph Drouhin | Beaune 1er Cru “Clos des Mouches” | AOC Beaune 1er Cru | Chardonnay | 2022 |  |  | 340
+Chavy-Chouet | Saint-Aubin 1er Cru “Murgers des Dents de Chien” | AOC Saint-Aubin 1er Cru | Chardonnay | 2024 |  |  | 148
+Chavy-Chouet | Puligny-Montrachet 1er Cru “Les Folatières” | AOC Puligny-Montrachet 1er Cru | Chardonnay | 2024 |  |  | 207
+### Hautes-Côtes & Bourgogne
+Domaine Bonnardot | Hautes-Côtes de Nuits “Les Frangines” | AOC Bourgogne Hautes-Côtes de Nuits | Chardonnay | 2025 |  |  | 52
+Fanny Sabre | Bourgogne Aligoté | AOC Bourgogne Aligoté | 100% Aligoté | 2024 |  |  | 67
+Chanterêves | Hautes-Côtes de Beaune “Les Monts de Fussey” | AOC Bourgogne Hautes-Côtes de Beaune | Chardonnay | 2024 |  |  | 101
+## Alsace
+Domaine Wassler | Pinot Blanc | AOC Alsace | Pinot Blanc | 2024 |  |  | 39
+Domaine Stentz-Buecher | Riesling “Ortel” | AOC Alsace | 100% Riesling | 2018 |  |  | 65
+## Languedoc-Roussillon
+### Languedoc
+Domaine Gournier | Demain! Pinot Blanc | IGP Cévennes | 100% Pinot Blanc | 2023 |  |  | 28
+Mas d’Espanet | “Freesia” | IGP Cévennes | Viognier, Sauvignon | 2025 |  |  | 35
+Domaine de la Garance | Licence III | Vin de France | 100% Chardonnay | 2024 |  |  | 35
+Domaine Felines Jourdan | Picpoul de Pinet | AOC Picpoul de Pinet | 100% Picpoul | 2025 |  |  | 36
+Domaine Maxime Magnon | “L’Estrade” | Vin de France | Grenache Blanc | 2025 |  |  | 60
+### Roussillon
+Domaine Olivier Pithon | “Mon P’tit Pithon” | IGP Côtes Catalanes | Grenache Blanc, Macabeu | 2025 |  |  | 38
+Le Soula | Blanc | IGP Côtes Catalanes | Macabeu, Sauvignon | 2015 |  |  | 86
+Domaine Gauby | “Vieilles Vignes” Blanc | IGP Côtes Catalanes | Grenache Blanc, Macabeu | 2022 |  |  | 96
+Domaine du Clos des Fées | Les Sorcières | AOC Côtes du Roussillon | Grenache Blanc, Vermentino, Roussanne, Macabeu | 2025 |  |  | 48
+## Rhône
+### Rhône nord
+Domaine Rostaing | “Les Lézardes” | IGP Collines Rhodaniennes | Viognier | 2024 |  |  | 55
+Yves Cuilleron | Condrieu “Les Chaillets” | AOC Condrieu | Viognier | 2024 |  |  | 105
+### Rhône sud
+Stéphane Ogier | “Le Temps est venu” | AOC Côtes du Rhône | Grenache | 2025 |  |  | 36
+## Sud-Ouest
+Château Chambert | Roussanne | Vin de France | Roussanne | 2023 |  |  | 42
+## USA
+Kendall Jackson | Vintner’s Reserve | Californie | 100% Chardonnay | 2021 |  |  | 78
+
+# Rouges
+## Bourgogne
+### Côte de Nuits
+David Duband | Nuits-Saint-Georges | AOC Nuits-Saint-Georges | 100% Pinot Noir | 2019 |  |  | 98
+Chanterêves | Nuits-Saint-Georges 1er Cru “Aux Chaignots” | AOC Nuits-Saint-Georges 1er Cru | 100% Pinot Noir | 2023 |  |  | 268
+David Duband | Morey-Saint-Denis 1er Cru “Clos Sorbé” | AOC Morey-Saint-Denis 1er Cru | 100% Pinot Noir | 2021 |  |  | 135
+Domaine Amiots et Fils | Morey-Saint-Denis 1er Cru “Aux Charmes” | AOC Morey-Saint-Denis 1er Cru | 100% Pinot Noir | 2022 |  |  | 172
+Domaine Aurélien Verdet | Vosne-Romanée | AOC Vosne-Romanée | 100% Pinot Noir | 2023 |  |  | 150
+Dominique Laurent | Gevrey-Chambertin 1er Cru “Les Champeaux” | AOC Gevrey-Chambertin 1er Cru | 100% Pinot Noir | 2020 | Vieilles Vignes |  | 237
+David Duband | Chambolle-Musigny 1er Cru “Les Sentiers” | AOC Chambolle-Musigny 1er Cru | 100% Pinot Noir | 2017 |  |  | 255
+Joseph Drouhin | Clos de Vougeot Grand Cru | AOC Clos de Vougeot | 100% Pinot Noir | 2018 |  |  | 350
+### Côte de Beaune
+Fanny Sabre | Beaune 1er Cru “Les Chouacheux” | AOC Beaune 1er Cru | 100% Pinot Noir | 2024 |  |  | 102
+Domaine de Chassorney | Volnay | AOC Volnay | 100% Pinot Noir | 2022 |  |  | 115
+Dominique Laurent | Volnay 1er Cru “Clos des Chênes” | AOC Volnay 1er Cru | 100% Pinot Noir | 2013 | Vieilles Vignes |  | 176
+Dominique Laurent | Pommard 1er Cru “Les Épenots” Vieilles Vignes | AOC Pommard 1er Cru | 100% Pinot Noir | 2016 |  |  | 132
+### Côte chalonnaise
+Domaine Joblot | Givry 1er Cru “Clos du Cellier aux Moines” | AOC Givry 1er Cru | 100% Pinot Noir | 2016 |  |  | 104
+### Bourgogne
+Dominique Laurent | Bourgogne “Le Coulejoie” | AOC Bourgogne | Pinot Noir, Gamay | 2022 |  |  | 43
+## Beaujolais
+### Beaujolais
+Château Cambon | Beaujolais | AOC Beaujolais | Gamay | 2024 |  |  | 37
+Kewin Descombes | Beaujolais “Cuvée Kéké” | AOC Beaujolais | Gamay | 2023 |  |  | 38
+Marcel Lapierre | “Raisins Gaulois” | Vin de France | Gamay | 2024 |  |  | 48
+### Crus du Beaujolais
+Domaine des Fournelles | Côte de Brouilly | AOC Côte de Brouilly | Gamay |  |  |  | 33
+Domaine des Fournelles | Côte de Brouilly “Élixir” | AOC Côte de Brouilly | Gamay |  |  |  | 43
+Georges Descombes | Morgon | AOC Morgon | Gamay | 2023 |  |  | 48
+Marcel Lapierre | Morgon “Cuvée Camille” | AOC Morgon | Gamay | 2025 |  |  | 85
+Domaine Joseph Chamonard | Fleurie | AOC Fleurie | Gamay | 2020 |  |  | 61
+Christophe Pacalet | Juliénas | AOC Juliénas | Gamay | 2023 |  |  | 62
+## Alsace
+Domaine Solher | Pinot Noir “Bacchus” | AOC Alsace | Pinot Noir | 2022 |  |  | 47
+Domaine Wassler | Pinot Noir | AOC Alsace | Pinot Noir | 2025 |  |  | 47
+## Bordeaux
+Vieux Château Champs de Mars | Castillon | AOC Castillon Côtes de Bordeaux | Merlot, Cabernet Franc | 2001 |  |  | 83
+Château Martet | Réserve de Famille | AOC Sainte-Foy Côtes de Bordeaux | Merlot | 2020 |  |  | 122
+## Sud-Ouest
+Domaine des Gravalous | Le Caillou | AOC Côtes du Lot | Malbec | 2025 |  |  | 37
+## Loire
+### Anjou-Saumur
+Arnaud Lambert | “Yves Lambert” | AOC Saumur-Champigny | Cabernet Franc | 2024 |  |  | 37
+Domaine de la Bergerie | “La Cerisaie” | AOC Anjou | Cabernet Franc | 2023 |  |  | 39
+### Touraine
+Complices de Loire | Chinon “La Petite Timonerie” | AOC Chinon | Cabernet Franc | 2024 |  |  | 32
+Domaine Baudry | Chinon “Domaine” | AOC Chinon | Cabernet Franc | 2023 |  |  | 40
+Domaine Philippe Alliet | Chinon “Domaine” | AOC Chinon | Cabernet Franc | 2025 |  |  | 48
+Domaine Baudry | Chinon “Le Clos Guillot” | AOC Chinon | Cabernet Franc | 2015 |  |  | 80
+Domaine Philippe Alliet | Chinon “Coteau de Noiré” | AOC Chinon | Cabernet Franc | 2018 |  |  | 96
+Clos du Tue-Bœuf | “Vin Rouge” | Vin de France | Gamay | 2024 |  |  | 38
+### Centre-Loire
+Domaine François Crochet | Sancerre Rouge | AOC Sancerre | Pinot Noir | 2023 |  |  | 83
+## Languedoc
+Mas d’Espanet | “Freesia” | IGP Cévennes | Cinsault, Grenache | 2025 |  |  | 32
+Artisans Partisans | Corbières “Alice” | AOC Corbières | Syrah, Carignan, Cinsault | 2024 |  |  | 34
+Isle Saint-Pierre | Résistant Rouge | Vin de France | Merlot Khorus | 2024 |  |  | 36
+Domaine Canet-Valette | Antonyme | AOC Saint-Chinian | Grenache, Syrah, Mourvèdre, Carignan | 2024 |  |  | 36
+Clos Marie | Pic-Saint-Loup “L’Olivette” | AOC Pic-Saint-Loup | Grenache, Syrah | 2024 |  |  | 63
+Clos Marie | Pic-Saint-Loup “Simon” | AOC Pic-Saint-Loup | Grenache, Syrah | 2021 |  |  | 83
+Mas Jullien | “Le Trescol” | IGP Aveyron | Pinot Noir | 2023 |  |  | 88
+Roc d’Anglade | Rouge | IGP Gard | Grenache, Mourvèdre, Syrah | 2020 |  |  | 112
+## Rhône
+### Rhône nord
+Stéphane Ogier | Crozes-Hermitage “Face à Face” | AOC Crozes-Hermitage | Syrah | 2024 |  |  | 65
+Domaine Graillot | Crozes-Hermitage | AOC Crozes-Hermitage | Syrah | 2023 |  |  | 76
+Stéphane Ogier | Saint-Joseph “Le Passage” | AOC Saint-Joseph | Syrah | 2022 |  |  | 75
+Domaine Courbis | Cornas “Champelrose” | AOC Cornas | Syrah | 2018 |  |  | 79
+Stéphane Ogier | Côte-Rôtie “Mon Village” | AOC Côte-Rôtie | Syrah | 2018 |  |  | 126
+Domaine Rostaing | Côte-Rôtie “Ampodium” | AOC Côte-Rôtie | Syrah | 2024 |  |  | 136
+### Rhône sud
+Domaine de Boisseyt | Côtes du Rhône “Chute Libre” | AOC Côtes du Rhône | Grenache, Syrah | 2023 |  |  | 32
+Domaine de Piéblanc | Bourdon | AOC Côtes du Rhône | Syrah | 2024 |  |  | 33
+Stéphane Ogier | “Le Temps est venu” | AOC Côtes du Rhône | Grenache, Syrah | 2024 |  |  | 36
+Domaine Charvin | Côtes du Rhône | AOC Côtes du Rhône | Grenache | 2023 |  |  | 45
+Raymond Usseglio | Châteauneuf-du-Pape | AOC Châteauneuf-du-Pape | Grenache, Syrah | 2023 |  |  | 84
+Domaine Charvin | Châteauneuf-du-Pape | AOC Châteauneuf-du-Pape | Grenache | 2022 |  |  | 99
+
+# Magnums
+## Rosé
+Château La Mascaronne | Côtes de Provence | AOC Côtes de Provence | Grenache, Cinsault, Syrah, Rolle |  |  | 150 cl | 75
+Château La Mascaronne | Côtes de Provence | AOC Côtes de Provence | Grenache, Cinsault, Syrah, Rolle |  |  | 300 cl | 165
+Domaine du Paternel | Grand Rosé | AOC Côtes de Provence | Cinsault, Grenache, Syrah |  |  | 150 cl | 88
+## Blanc
+Yves Cuilleron | Viognier | IGP Collines Rhodaniennes | Viognier | 2023 |  | 150 cl | 98
+## Rouge
+Michel Picard | Mercurey 1er Cru “Clos de Paradis” | AOC Mercurey 1er Cru | 100% Pinot Noir | 2017 |  | 150 cl | 176
+Joseph Drouhin | Côte de Beaune | AOC Côte de Beaune | 100% Pinot Noir | 2021 |  | 150 cl | 286
+Château Seguin | Pessac-Léognan “La Lignée” | AOC Pessac-Léognan | Cabernet Sauvignon, Merlot | 2010 |  | 150 cl | 146

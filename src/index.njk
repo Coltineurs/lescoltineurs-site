@@ -1,0 +1,102 @@
+---
+layout: base.njk
+bodyClass: accueil
+description: "Les Coltineurs, bistrot de quartier au 97 avenue de Versailles (Paris 16e) : cuisine française de saison, généreuse et sans chichi, et vins de petits vignerons. Ouvert du mardi au samedi, midi et soir."
+jsonld: restaurant
+---
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__texte">
+      <p class="surtitre">Bistrot français · Paris 16ᵉ</p>
+      <h1>Une cuisine de bistrot français, généreuse et de saison</h1>
+      <p class="chapo">Du bon produit finement sourcé au verre bien réconfortant : Gabin et son équipe vous accueillent sans chichi, avenue de Versailles.</p>
+      <div class="boutons">
+        <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
+        <a class="bouton" href="/menu/">Voir le menu</a>
+      </div>
+      <p class="hero__ouverture">Ouvert du mardi au samedi, 12h – 14h30 et 18h30 – 23h</p>
+    </div>
+    <div class="hero__image">
+      {% image "salle-interieur.jpg", "La salle des Coltineurs : murs couverts de cadres, lambris vert et sol en mosaïque", "(max-width: 50rem) 100vw, 45vw", [480, 800, 1080], "eager" %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="conteneur duo">
+    <div>
+      <p class="surtitre">La maison</p>
+      <h2>Du bon produit au verre bien réconfortant</h2>
+      <p>En plein cœur du XVIᵉ, Gabin et son équipe vous accueillent sans chichi, un bon verre et des assiettes généreuses à la main.</p>
+      <p>Une approche ancrée dans le terroir français : une cuisine de caractère, généreuse et intemporelle. La carte évolue au gré des envies du chef, de ses coups de cœur et des produits de saison, dans un lieu chaleureux où chaque plat raconte une histoire.</p>
+      <div class="boutons">
+        <a class="bouton" href="/menu/">Le menu</a>
+      </div>
+    </div>
+    <div>
+      {% image "plat-ris-de-veau-morilles.jpg", "Cœur de ris de veau doré, sauce crémée aux morilles", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--papier">
+  <div class="conteneur duo duo--inverse">
+    <div>
+      <p class="surtitre">La cave</p>
+      <h2>Le respect du terroir, jusque dans les verres</h2>
+      <p>Notre carte des vins est exclusivement tournée vers de petits vignerons qui prennent soin de respecter une agriculture et une vinification saines : des bulles aux grands bourgognes, en passant par la Loire, le Rhône et le Languedoc.</p>
+      <div class="boutons">
+        <a class="bouton" href="/carte-des-vins/">La carte des vins</a>
+      </div>
+    </div>
+    <div>
+      {% image "illustration-salle-aquarelle.jpg", "Aquarelle de la salle des Coltineurs, animée, un soir de service", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1200] %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="conteneur">
+    <div class="galerie">
+      {% image "plat-homard-tagliatelles.jpg", "Homard bleu rôti sur des tagliatelles, sauce mousseuse et cerfeuil", "(max-width: 40rem) 50vw, 33vw", [400, 800] %}
+      {% image "plat-ris-de-veau-morilles.jpg", "Ris de veau aux morilles", "(max-width: 40rem) 50vw, 33vw", [400, 800] %}
+      {% image "salle-interieur.jpg", "Les banquettes et les cadres de la salle", "33vw", [400, 800] %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--vert" id="infos">
+  <div class="conteneur">
+    <p class="surtitre" style="color:#e9c77f">Infos pratiques</p>
+    <h2>Venir aux Coltineurs</h2>
+    <div class="infos">
+      <div>
+        <h3>Adresse</h3>
+        <p>{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}</p>
+        <p><a href="{{ site.carte }}" rel="noopener">Voir sur le plan</a></p>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <table class="horaires">
+          <caption class="sr">Horaires d'ouverture</caption>
+          <tbody>
+          {%- for h in site.horaires %}
+            <tr{% if not h.services.length %} class="ferme"{% endif %}>
+              <th scope="row">{{ h.jour }}</th>
+              <td>{% if h.services.length %}{% for s in h.services %}{{ s[0] | heure }} – {{ s[1] | heure }}{% if not loop.last %} · {% endif %}{% endfor %}{% else %}Fermé{% endif %}</td>
+            </tr>
+          {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3>Réservations</h3>
+        <p>Déjeuner et dîner, en ligne ou par téléphone au <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a>.</p>
+        <div class="boutons">
+          <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver</a>
+          <a class="bouton" href="/privatisation/">Groupes et privatisation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

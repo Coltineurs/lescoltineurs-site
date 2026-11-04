@@ -1,0 +1,43 @@
+---
+layout: base.njk
+title: Rejoindre l'équipe
+permalink: /rejoindre-l-equipe/
+description: "Les Coltineurs recrutent en salle et en cuisine. Rejoignez une équipe professionnelle et passionnée dans un bistrot du 16e arrondissement de Paris."
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">Recrutement</p>
+  <h1>Tu veux rejoindre les Coltineurs ?</h1>
+  <p class="chapo">Nous rejoindre, c'est s'engager avec une équipe professionnelle, passionnée et toujours en recherche d'apprentissage. Si ces quelques mots te font vibrer, c'est le moment de postuler !</p>
+</header>
+
+<section class="section" style="padding-top:1rem">
+  <div class="conteneur etroit">
+    <form class="formulaire" name="candidature" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="adresse-web" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="candidature">
+      <p class="piege"><label>Ne pas remplir : <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
+      <div>
+        <label for="nom">Nom et prénom</label>
+        <input id="nom" name="nom" type="text" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="telephone">Téléphone <span class="aide">(facultatif)</span></label>
+        <input id="telephone" name="telephone" type="tel" autocomplete="tel">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Le poste qui t'intéresse (salle, cuisine…), tes disponibilités, ce qui te motive."></textarea>
+      </div>
+      <div>
+        <label for="cv">CV ou lettre de motivation</label>
+        <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+        <p class="aide">PDF, Word ou image, 8 Mo maximum.</p>
+      </div>
+      <p class="aide">Tes informations servent uniquement à traiter ta candidature. Elles ne sont ni revendues ni conservées au-delà du recrutement.</p>
+      <button class="bouton bouton--plein" type="submit">Envoyer ma candidature</button>
+    </form>
+  </div>
+</section>
