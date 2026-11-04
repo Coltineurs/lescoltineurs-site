@@ -15,6 +15,7 @@ export default {
   },
   telephone: "01 45 27 15 74",
   telephoneIntl: "+33145271574",
+  emailContact: "hello@lescoltineurs.com",
   emailPrivatisation: "nicolas@lescoltineurs.com",
   instagram: "https://www.instagram.com/lescoltineurs/",
   cafeSanFrancisco: "https://www.cafe-san-francisco.fr/",

@@ -12,13 +12,13 @@ sitemap: false
   <div class="conteneur etroit prose">
     <h2>Éditeur du site</h2>
     <p>
-      <span class="a-completer">[Raison sociale et forme juridique, à compléter]</span><br>
-      Exploitant du restaurant Les Coltineurs<br>
-      {{ site.adresse.rue }}, {{ site.adresse.codePostal }} {{ site.adresse.ville }}<br>
-      Téléphone : {{ site.telephone }}<br>
-      SIRET : <span class="a-completer">[à compléter]</span> · RCS : <span class="a-completer">[à compléter]</span><br>
-      N° de TVA intracommunautaire : <span class="a-completer">[à compléter]</span><br>
-      Directeur de la publication : <span class="a-completer">[à compléter]</span>
+      LES COLTINEURS, société par actions simplifiée (SAS) au capital de 8 000 €<br>
+      Siège social : {{ site.adresse.rue }}, {{ site.adresse.codePostal }} {{ site.adresse.ville }}<br>
+      RCS Paris 850 310 129 · SIRET 850 310 129 00018<br>
+      N° de TVA intracommunautaire : FR52850310129<br>
+      Téléphone : {{ site.telephone }} · E-mail : <a href="mailto:{{ site.emailContact }}">{{ site.emailContact }}</a><br>
+      Présidente : HOMARD &amp; BAGARRE HOLDING (SAS, RCS Paris 921 865 333)<br>
+      Directeur de la publication : <span class="a-completer">[nom du représentant légal de HOMARD &amp; BAGARRE HOLDING, à compléter]</span>
     </p>
 
     <h2>Hébergement</h2>
@@ -26,9 +26,9 @@ sitemap: false
 
     <h2>Données personnelles</h2>
     <p>Le site ne dépose aucun cookie de mesure d'audience ni de publicité. Les réservations et demandes de privatisation sont gérées par Zenchef, selon sa propre politique de confidentialité.</p>
-    <p>Les candidatures envoyées via le formulaire « Rejoindre l'équipe » (nom, e-mail, téléphone, message, CV) servent uniquement au recrutement et sont supprimées à l'issue du processus. Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant à <span class="a-completer">[adresse e-mail de contact, à compléter]</span>.</p>
+    <p>Les candidatures envoyées via le formulaire « Rejoindre l'équipe » (nom, e-mail, téléphone, message, CV) servent uniquement au recrutement et sont supprimées à l'issue du processus. Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant à <a href="mailto:{{ site.emailContact }}">{{ site.emailContact }}</a>.</p>
 
     <h2>Crédits</h2>
-    <p>Photographies et illustrations : Les Coltineurs<span class="a-completer">[préciser l'auteur de l'aquarelle si souhaité]</span>.</p>
+    <p>Photographies et illustrations : Les Coltineurs.</p>
   </div>
 </section>
