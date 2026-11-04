@@ -1,4 +1,4 @@
-# Site des Coltineurs : lescoltineurs.fr
+# Site des Coltineurs : lescoltineurs.com (provisoire, en attendant le .fr)
 
 Site statique généré avec [Eleventy](https://www.11ty.dev/) et hébergé sur Netlify.
 

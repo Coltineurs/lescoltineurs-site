@@ -1,5 +1,6 @@
 import path from "node:path";
 import Image from "@11ty/eleventy-img";
+import site from "./src/_data/site.js";
 
 const IMG_DIR = "src/assets/images";
 
@@ -68,7 +69,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("menuSchema", (menu) => ({
     "@context": "https://schema.org",
     "@type": "Menu",
-    "@id": "https://lescoltineurs.fr/menu/#menu",
+    "@id": `${site.url}/menu/#menu`,
     name: "Menu des Coltineurs",
     inLanguage: "fr",
     hasMenuSection: menu.categories.map((c) => ({
@@ -85,7 +86,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("vinsSchema", (vins) => ({
     "@context": "https://schema.org",
     "@type": "Menu",
-    "@id": "https://lescoltineurs.fr/carte-des-vins/#vins",
+    "@id": `${site.url}/carte-des-vins/#vins`,
     name: "Carte des vins des Coltineurs",
     inLanguage: "fr",
     hasMenuSection: vins.categories.map((c) => ({

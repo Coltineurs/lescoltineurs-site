@@ -2,7 +2,10 @@
 // (en-tête, pied de page, données structurées, mentions légales).
 export default {
   nom: "Les Coltineurs",
-  url: "https://lescoltineurs.fr",
+  // Adresse principale du site (balises canoniques, plan du site, données structurées).
+  // Provisoirement le .com : le .fr est bloqué chez Scaleway. Pour revenir au .fr,
+  // changer cette ligne et inverser les redirections dans src/static/_redirects.
+  url: "https://lescoltineurs.com",
   langue: "fr",
   slogan: "Bistrot français, Paris 16e",
   description:

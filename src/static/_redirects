@@ -6,6 +6,13 @@
 /cart        /                      301
 /cart/       /                      301
 
-# Une fois les domaines branchés sur Netlify : tout vers https://lescoltineurs.fr
-https://www.lescoltineurs.fr/*   https://lescoltineurs.fr/:splat   301!
-http://www.lescoltineurs.fr/*    https://lescoltineurs.fr/:splat   301!
+# Adresse principale provisoire : https://lescoltineurs.com (sans www)
+https://www.lescoltineurs.com/*  https://lescoltineurs.com/:splat  301!
+http://www.lescoltineurs.com/*   https://lescoltineurs.com/:splat  301!
+https://lescoltineurs.netlify.app/*  https://lescoltineurs.com/:splat  301!
+
+# Le jour où le .fr pointe vers Netlify : le renvoyer aussi vers l'adresse principale
+https://lescoltineurs.fr/*       https://lescoltineurs.com/:splat  301!
+https://www.lescoltineurs.fr/*   https://lescoltineurs.com/:splat  301!
+http://lescoltineurs.fr/*        https://lescoltineurs.com/:splat  301!
+http://www.lescoltineurs.fr/*    https://lescoltineurs.com/:splat  301!
