@@ -8,7 +8,7 @@ export default [
   },
   {
     question: "Quels sont les horaires d'ouverture ?",
-    reponse: "Du mardi au samedi, de 12h à 14h30 et de 18h30 à 23h. Le restaurant est fermé le dimanche et le lundi, jours réservés aux privatisations.",
+    reponse: "Du mardi au samedi, de 12h à 14h30 et de 18h30 à 23h. Le restaurant est fermé au public le dimanche et le lundi.",
   },
   {
     question: "Comment réserver une table ?",
@@ -24,6 +24,6 @@ export default [
   },
   {
     question: "Peut-on privatiser le restaurant ?",
-    reponse: `Oui, le dimanche et le lundi, à partir de 1 500 €, pour un anniversaire, un repas d'entreprise ou une fête de famille. Écrivez à Nicolas : ${site.emailPrivatisation}.`,
+    reponse: `Oui, tous les jours de la semaine, midi ou soir, à partir de 1 500 €, pour un anniversaire, un repas d'entreprise ou une fête de famille. Écrivez à Nicolas : ${site.emailPrivatisation}.`,
   },
 ];
