@@ -77,11 +77,11 @@
         <a href="/privatisation/">Privatiser le restaurant</a></p>
       </div>
     </div>
-    <p class="pied__legal"><a href="/mentions-legales/">Mentions légales</a> · {% if site.googleAds %}<button type="button" class="lien" data-consentement="gerer">Gérer les cookies</button> · {% endif %} © {{ "now" | annee }} Les Coltineurs</p>
+    <p class="pied__legal"><a href="/mentions-legales/">Mentions légales</a> · {% if site.googleAds or site.googleAnalytics %}<button type="button" class="lien" data-consentement="gerer">Gérer les cookies</button> · {% endif %} © {{ "now" | annee }} Les Coltineurs</p>
   </footer>
-  {%- if site.googleAds %}
-  <div id="consentement" class="consentement" role="dialog" aria-live="polite" aria-label="Cookies" data-google-ads="{{ site.googleAds }}" hidden>
-    <p>Avec votre accord, nous utilisons un cookie Google Ads pour mesurer l'efficacité de nos publicités. Aucun autre suivi. <a href="/mentions-legales/#cookies">En savoir plus</a></p>
+  {%- if site.googleAds or site.googleAnalytics %}
+  <div id="consentement" class="consentement" role="dialog" aria-live="polite" aria-label="Cookies" data-google-ads="{{ site.googleAds }}" data-google-analytics="{{ site.googleAnalytics }}" hidden>
+    <p>Avec votre accord, nous utilisons des cookies Google pour compter les visites et mesurer l'efficacité de nos publicités. Rien n'est revendu, et le site fonctionne de la même façon si vous refusez. <a href="/mentions-legales/#cookies">En savoir plus</a></p>
     <div class="consentement__boutons">
       <button type="button" class="bouton" data-consentement="refuse">Refuser</button>
       <button type="button" class="bouton" data-consentement="accepte">Accepter</button>
