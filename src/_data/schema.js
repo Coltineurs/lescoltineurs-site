@@ -31,7 +31,12 @@ export default {
     addressLocality: site.adresse.ville,
     addressCountry: site.adresse.pays,
   },
-  servesCuisine: ["Française", "Bistrot"],
+  servesCuisine: ["Française", "Bistrot", "Cuisine de saison"],
+  areaServed: "Paris 16e",
+  founder: [
+    { "@type": "Person", name: "Gabin Jarry", jobTitle: "Chef de cuisine" },
+    { "@type": "Person", name: "Nicolas Estivin", jobTitle: "Responsable de salle" },
+  ],
   priceRange: "€€€",
   acceptsReservations: site.zenchef.reserver,
   hasMenu: `${site.url}/menu/`,

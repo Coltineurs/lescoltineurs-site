@@ -7,9 +7,9 @@ export default {
   // changer cette ligne et inverser les redirections dans src/static/_redirects.
   url: "https://lescoltineurs.com",
   langue: "fr",
-  slogan: "Bistrot français, Paris 16e",
+  slogan: "Restaurant bistrot français à Paris 16e",
   description:
-    "Les Coltineurs, bistrot de quartier au 97 avenue de Versailles (Paris 16e) : cuisine française de saison, généreuse et sans chichi, et une carte de vins de petits vignerons. Ouvert du mardi au samedi.",
+    "Les Coltineurs, restaurant bistrot de quartier au 97 avenue de Versailles (Paris 16e), tenu par Gabin Jarry en cuisine et Nicolas Estivin en salle : cuisine française de saison, généreuse et sans chichi, et une carte de vins de petits vignerons. Ouvert du mardi au samedi, midi et soir.",
   adresse: {
     rue: "97 avenue de Versailles",
     codePostal: "75016",
@@ -21,7 +21,6 @@ export default {
   emailContact: "hello@lescoltineurs.com",
   emailPrivatisation: "nicolas@lescoltineurs.com",
   instagram: "https://www.instagram.com/lescoltineurs/",
-  cafeSanFrancisco: "https://www.cafe-san-francisco.fr/",
   zenchef: {
     reserver: "https://bookings.zenchef.com/results?rid=358317&pid=1001",
     privatiser: "https://bookings.zenchef.com/privatisation?rid=358317&pid=1001",

@@ -14,7 +14,7 @@ Domaine principal : `https://lescoltineurs.fr`, sans « www ». Le « www » red
 | `/mentions-legales/` | Mentions légales | Éditeur, hébergeur (Netlify), contact. Obligatoire en France, absent aujourd'hui | `noindex` |
 | `/404.html` | Page introuvable | Liens vers l'accueil, le menu, la réservation | |
 
-**Sur toutes les pages** : une en-tête avec logo, navigation et bouton « Réserver » toujours visible. Le pied de page reprend l'adresse, les horaires, le téléphone, Instagram, le lien vers le Café San Francisco et les mentions légales. Un bandeau d'annonce facultatif sert aux ouvertures exceptionnelles, comme la fête des mères. Il est modifiable sans toucher au code, voir question 3.
+**Sur toutes les pages** : une en-tête avec logo, navigation et bouton « Réserver » toujours visible. Le pied de page reprend l'adresse, les horaires, le téléphone, Instagram et les mentions légales. Un bandeau d'annonce facultatif sert aux ouvertures exceptionnelles, comme la fête des mères. Il est modifiable sans toucher au code, voir question 3.
 
 ## Redirections 301 (`_redirects` Netlify)
 

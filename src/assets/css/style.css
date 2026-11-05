@@ -279,3 +279,8 @@ p { margin: 0 0 1em; }
 .consentement__boutons { display: flex; gap: 0.6rem; justify-content: flex-end; flex-wrap: wrap; }
 .consentement .bouton { font: inherit; cursor: pointer; background: var(--papier); padding: 0.55rem 1.3rem; }
 .consentement .bouton:hover { background: var(--vert); color: var(--creme); }
+
+/* Questions fréquentes */
+.faq details { border-bottom: 1px solid currentColor; border-color: rgba(0,0,0,.15); padding: .9rem 0; }
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq details p { margin: .6rem 0 0; }

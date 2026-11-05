@@ -100,6 +100,15 @@ export default function (eleventyConfig) {
       })),
     })),
   }));
+  eleventyConfig.addFilter("faqSchema", (faq) => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: { "@type": "Answer", text: q.reponse },
+    })),
+  }));
   eleventyConfig.addFilter("isoDate", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addFilter("annee", () => new Date().getFullYear());
 

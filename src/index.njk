@@ -1,15 +1,15 @@
 ---
 layout: base.njk
 bodyClass: accueil
-description: "Les Coltineurs, bistrot de quartier au 97 avenue de Versailles (Paris 16e) : cuisine française de saison, généreuse et sans chichi, et vins de petits vignerons. Ouvert du mardi au samedi, midi et soir."
+description: "Restaurant bistrot français au 97 avenue de Versailles, Paris 16e (métro Mirabeau). Cuisine de saison de Gabin, salle et vins de Nicolas. Du mardi au samedi."
 jsonld: restaurant
 ---
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__texte">
-      <p class="surtitre">Bistrot français · Paris 16ᵉ</p>
-      <h1>Une cuisine de bistrot français, généreuse et de saison</h1>
-      <p class="chapo">Du bon produit finement sourcé au verre bien réconfortant : Gabin et son équipe vous accueillent sans chichi, avenue de Versailles.</p>
+      <p class="surtitre">Restaurant · Bistrot français · Paris 16ᵉ</p>
+      <h1>Les Coltineurs, bistrot français de quartier à Paris 16ᵉ</h1>
+      <p class="chapo">Gabin en cuisine, Nicolas en salle : deux vrais aubergistes, une cuisine française de saison généreuse et sans chichi, et des vins de petits vignerons, au 97 avenue de Versailles.</p>
       <div class="boutons">
         <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
         <a class="bouton" href="/menu/">Voir le menu</a>
@@ -17,7 +17,7 @@ jsonld: restaurant
       <p class="hero__ouverture">Ouvert du mardi au samedi, 12h – 14h30 et 18h30 – 23h</p>
     </div>
     <div class="hero__image">
-      {% image "salle-interieur.jpg", "La salle des Coltineurs : murs couverts de cadres, lambris vert et sol en mosaïque", "(max-width: 50rem) 100vw, 45vw", [480, 800, 1080], "eager" %}
+      {% image "salle-interieur.jpg", "Salle du restaurant Les Coltineurs à Paris 16e : murs couverts de cadres, lambris vert et sol en mosaïque", "(max-width: 50rem) 100vw, 45vw", [480, 800, 1080], "eager" %}
     </div>
   </div>
 </section>
@@ -26,15 +26,17 @@ jsonld: restaurant
   <div class="conteneur duo">
     <div>
       <p class="surtitre">La maison</p>
-      <h2>Du bon produit au verre bien réconfortant</h2>
-      <p>En plein cœur du XVIᵉ, Gabin et son équipe vous accueillent sans chichi, un bon verre et des assiettes généreuses à la main.</p>
-      <p>Une approche ancrée dans le terroir français : une cuisine de caractère, généreuse et intemporelle. La carte évolue au gré des envies du chef, de ses coups de cœur et des produits de saison, dans un lieu chaleureux où chaque plat raconte une histoire.</p>
+      <h2>Gabin et Nicolas, deux aubergistes avenue de Versailles</h2>
+      <p>Les Coltineurs, c'est l'histoire de deux associés et de vrais aubergistes, au sens le plus noble du terme : de ceux qui aiment nourrir, servir et recevoir, et pour qui un bon repas est d'abord un moment partagé.</p>
+      <p><strong>En cuisine, Gabin Jarry</strong> sélectionne les meilleurs produits, au plus près des saisons : viandes de caractère, poissons de petite pêche, légumes de beaux maraîchers, fromages affinés. Il les travaille avec respect et générosité, pour des assiettes franches, gourmandes, qui ont du goût et du cœur.</p>
+      <p><strong>En salle, Nicolas Estivin</strong> a le sens inné de l'accueil et du service. Il connaît ses habitués par leur prénom, devine la table qui vous ira, raconte les plats et les vignerons, et veille à ce que chaque client reparte avec l'envie de revenir.</p>
+      <p>Avec leur équipe, ils ont voulu un vrai <strong>restaurant de quartier dans le 16ᵉ arrondissement</strong> : on y vient pour un déjeuner d'affaires, un dîner en famille ou un verre entre amis, et l'on s'y sent attendu.</p>
       <div class="boutons">
-        <a class="bouton" href="/menu/">Le menu</a>
+        <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver</a>
       </div>
     </div>
     <div>
-      {% image "plat-ris-de-veau-morilles.jpg", "Cœur de ris de veau doré, sauce crémée aux morilles", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
+      {% image "illustration-salle-aquarelle.jpg", "Aquarelle de la salle des Coltineurs, bistrot de l'avenue de Versailles, un soir de service", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1200] %}
     </div>
   </div>
 </section>
@@ -42,25 +44,49 @@ jsonld: restaurant
 <section class="section section--papier">
   <div class="conteneur duo duo--inverse">
     <div>
-      <p class="surtitre">La cave</p>
-      <h2>Le respect du terroir, jusque dans les verres</h2>
-      <p>Notre carte des vins est exclusivement tournée vers de petits vignerons qui prennent soin de respecter une agriculture et une vinification saines : des bulles aux grands bourgognes, en passant par la Loire, le Rhône et le Languedoc.</p>
+      <p class="surtitre">La cuisine</p>
+      <h2>Une cuisine de bistrot français, généreuse et de saison</h2>
+      <p>Une cuisine ancrée dans le terroir, de caractère et intemporelle : de beaux produits finement sourcés, travaillés simplement et servis avec générosité.</p>
+      <p>La carte change au fil des saisons, des arrivages et des coups de cœur de Gabin. Entrées, poissons, viandes, fromages et desserts : le menu du moment est toujours à jour sur le site.</p>
       <div class="boutons">
-        <a class="bouton" href="/carte-des-vins/">La carte des vins</a>
+        <a class="bouton" href="/menu/">Le menu du moment</a>
       </div>
     </div>
     <div>
-      {% image "illustration-salle-aquarelle.jpg", "Aquarelle de la salle des Coltineurs, animée, un soir de service", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1200] %}
+      {% image "plat-ris-de-veau-morilles.jpg", "Cœur de ris de veau doré et sauce crémée aux morilles, plat du restaurant Les Coltineurs", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="conteneur">
-    <div class="galerie">
-      {% image "plat-homard-tagliatelles.jpg", "Homard bleu rôti sur des tagliatelles, sauce mousseuse et cerfeuil", "(max-width: 40rem) 50vw, 33vw", [400, 800] %}
-      {% image "plat-ris-de-veau-morilles.jpg", "Ris de veau aux morilles", "(max-width: 40rem) 50vw, 33vw", [400, 800] %}
-      {% image "salle-interieur.jpg", "Les banquettes et les cadres de la salle", "33vw", [400, 800] %}
+  <div class="conteneur duo">
+    <div>
+      <p class="surtitre">La cave</p>
+      <h2>Des vins de petits vignerons, choisis avec soin</h2>
+      <p>Notre carte des vins est exclusivement tournée vers de petits vignerons qui respectent une agriculture et une vinification saines : champagnes, Loire, Bourgogne, Beaujolais, Rhône, Languedoc.</p>
+      <p>En salle, Nicolas aime raconter les domaines qu'il sert : laissez-vous guider pour trouver la bouteille qui accompagnera les plats de Gabin.</p>
+      <div class="boutons">
+        <a class="bouton" href="/carte-des-vins/">La carte des vins</a>
+      </div>
+    </div>
+    <div>
+      {% image "plat-homard-tagliatelles.jpg", "Homard bleu rôti sur des tagliatelles, sauce mousseuse et cerfeuil", "(max-width: 50rem) 100vw, 40vw", [400, 800] %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--papier">
+  <div class="conteneur duo duo--inverse">
+    <div>
+      <p class="surtitre">Événements</p>
+      <h2>Groupes et privatisation dans le 16ᵉ</h2>
+      <p>Anniversaire, repas d'entreprise, fête de famille : le dimanche et le lundi, privatisez le restaurant entier, à partir de 1 500 €. Du mardi au samedi, nous accueillons aussi les groupes avec une formule adaptée.</p>
+      <div class="boutons">
+        <a class="bouton" href="/privatisation/">Privatiser Les Coltineurs</a>
+      </div>
+    </div>
+    <div>
+      {% image "salle-interieur.jpg", "Les banquettes et les cadres de la salle des Coltineurs, à privatiser pour un événement", "(max-width: 50rem) 100vw, 40vw", [480, 800] %}
     </div>
   </div>
 </section>
@@ -68,11 +94,12 @@ jsonld: restaurant
 <section class="section section--vert" id="infos">
   <div class="conteneur">
     <p class="surtitre" style="color:#e9c77f">Infos pratiques</p>
-    <h2>Venir aux Coltineurs</h2>
+    <h2>Venir aux Coltineurs, avenue de Versailles</h2>
     <div class="infos">
       <div>
         <h3>Adresse</h3>
         <p>{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}</p>
+        <p>Paris 16ᵉ, quartier d'Auteuil<br>Métro Mirabeau ou Église d'Auteuil (ligne 10)</p>
         <p><a href="{{ site.carte }}" rel="noopener">Voir sur le plan</a></p>
       </div>
       <div>
@@ -100,3 +127,17 @@ jsonld: restaurant
     </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="conteneur etroit faq">
+    <p class="surtitre">Questions fréquentes</p>
+    <h2>Bon à savoir avant de venir</h2>
+    {%- for q in faq %}
+    <details>
+      <summary>{{ q.question }}</summary>
+      <p>{{ q.reponse }}</p>
+    </details>
+    {%- endfor %}
+  </div>
+</section>
+<script type="application/ld+json">{{ faq | faqSchema | json | safe }}</script>
