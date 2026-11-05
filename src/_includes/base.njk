@@ -18,11 +18,11 @@
   <meta property="og:url" content="{{ canonical }}">
   <meta property="og:image" content="{{ (ogImage or 'salle-interieur.jpg') | imageUrlSync | absolute(site.url) }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#014433">
+  <meta name="theme-color" content="#24453A">
   <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preload" href="/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/work-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/caslon-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/karla-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
   {%- if jsonld == "restaurant" %}{% set ld = schema %}{% elif jsonld == "menu" %}{% set ld = menu | menuSchema %}{% elif jsonld == "vins" %}{% set ld = vins | vinsSchema %}{% endif %}
   {% if ld %}<script type="application/ld+json">{{ ld | json | safe }}</script>{% endif %}

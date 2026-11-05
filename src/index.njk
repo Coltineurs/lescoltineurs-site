@@ -8,7 +8,7 @@ jsonld: restaurant
   <div class="hero__inner">
     <div class="hero__texte">
       <p class="surtitre">Restaurant · Bistrot français · Paris 16ᵉ</p>
-      <h1>Les Coltineurs, bistrot français de quartier à Paris 16ᵉ</h1>
+      <h1>Les Coltineurs, bistrot de quartier <em>où l'on se sent attendu</em></h1>
       <p class="chapo">Gabin en cuisine, Nicolas en salle : deux vrais aubergistes, une cuisine française de saison généreuse et sans chichi, et des vins de petits vignerons, au 97 avenue de Versailles.</p>
       <div class="boutons">
         <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
@@ -16,84 +16,83 @@ jsonld: restaurant
       </div>
       <p class="hero__ouverture">Ouvert du mardi au samedi, 12h – 14h30 et 18h30 – 23h</p>
     </div>
-    <div class="hero__image">
-      {% image "salle-interieur.jpg", "Salle du restaurant Les Coltineurs à Paris 16e : murs couverts de cadres, lambris vert et sol en mosaïque", "(max-width: 50rem) 100vw, 45vw", [480, 800, 1080], "eager" %}
+    <div class="hero__image carte-postale">
+      {% image "illustration-salle-aquarelle.jpg", "Aquarelle de la salle du restaurant Les Coltineurs à Paris 16e, un soir de service", "(max-width: 50rem) 90vw, 40vw", [480, 800, 1200], "eager" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sable">
+  <div class="conteneur">
+    <p class="surtitre centre">La maison</p>
+    <h2 class="centre">Gabin et Nicolas, <em>deux aubergistes avenue de Versailles</em></h2>
+    <p class="intro">Les Coltineurs, c'est l'histoire de deux associés et de vrais aubergistes, au sens le plus noble du terme : de ceux qui aiment nourrir, servir et recevoir, et pour qui un bon repas est d'abord un moment partagé.</p>
+    <div class="aubergistes">
+      <article class="fiche">
+        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 26h28a14 14 0 0 1-28 0z"/><path d="M4 26h36"/><path d="M16 18c0-3 3-3 3-6M23 18c0-3 3-3 3-6"/></svg>
+        <p class="surtitre">En cuisine</p>
+        <h3>Gabin Jarry</h3>
+        <p>Gabin sélectionne les meilleurs produits, au plus près des saisons : viandes de caractère, poissons de petite pêche, légumes de beaux maraîchers, fromages affinés. Il les travaille avec respect et générosité, pour des assiettes franches, gourmandes, qui ont du goût et du cœur.</p>
+      </article>
+      <article class="fiche">
+        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h16l-2 14a6 6 0 0 1-12 0z"/><path d="M22 26v12M15 38h14"/></svg>
+        <p class="surtitre">En salle</p>
+        <h3>Nicolas Estivin</h3>
+        <p>Nicolas a le sens inné de l'accueil et du service. Il connaît ses habitués par leur prénom, devine la table qui vous ira, raconte les plats et les vignerons, et veille à ce que chaque client reparte avec l'envie de revenir.</p>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="conteneur duo">
-    <div>
-      <p class="surtitre">La maison</p>
-      <h2>Gabin et Nicolas, deux aubergistes avenue de Versailles</h2>
-      <p>Les Coltineurs, c'est l'histoire de deux associés et de vrais aubergistes, au sens le plus noble du terme : de ceux qui aiment nourrir, servir et recevoir, et pour qui un bon repas est d'abord un moment partagé.</p>
-      <p><strong>En cuisine, Gabin Jarry</strong> sélectionne les meilleurs produits, au plus près des saisons : viandes de caractère, poissons de petite pêche, légumes de beaux maraîchers, fromages affinés. Il les travaille avec respect et générosité, pour des assiettes franches, gourmandes, qui ont du goût et du cœur.</p>
-      <p><strong>En salle, Nicolas Estivin</strong> a le sens inné de l'accueil et du service. Il connaît ses habitués par leur prénom, devine la table qui vous ira, raconte les plats et les vignerons, et veille à ce que chaque client reparte avec l'envie de revenir.</p>
-      <p>Avec leur équipe, ils ont voulu un vrai <strong>restaurant de quartier dans le 16ᵉ arrondissement</strong> : on y vient pour un déjeuner d'affaires, un dîner en famille ou un verre entre amis, et l'on s'y sent attendu.</p>
-      <div class="boutons">
-        <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver</a>
-      </div>
-    </div>
-    <div>
-      {% image "illustration-salle-aquarelle.jpg", "Aquarelle de la salle des Coltineurs, bistrot de l'avenue de Versailles, un soir de service", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1200] %}
-    </div>
-  </div>
-</section>
-
-<section class="section section--papier">
-  <div class="conteneur duo duo--inverse">
-    <div>
-      <p class="surtitre">La cuisine</p>
+    <div class="ardoise">
+      <p class="surtitre">L'ardoise du moment</p>
       <h2>Une cuisine de bistrot français, généreuse et de saison</h2>
-      <p>Une cuisine ancrée dans le terroir, de caractère et intemporelle : de beaux produits finement sourcés, travaillés simplement et servis avec générosité.</p>
-      <p>La carte change au fil des saisons, des arrivages et des coups de cœur de Gabin. Entrées, poissons, viandes, fromages et desserts : le menu du moment est toujours à jour sur le site.</p>
-      <div class="boutons">
-        <a class="bouton" href="/menu/">Le menu du moment</a>
-      </div>
+      <p>La carte change au fil des saisons, des arrivages et des coups de cœur de Gabin.</p>
+      {%- set apercu = menu | ardoise %}
+      {%- if apercu.length %}
+      <ul class="ardoise__plats">
+        {%- for p in apercu %}
+        <li><span>{{ p.nom }}</span><span>{{ p.prix }}</span></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      <a class="bouton" href="/menu/">Tout le menu</a>
     </div>
-    <div>
-      {% image "plat-ris-de-veau-morilles.jpg", "Cœur de ris de veau doré et sauce crémée aux morilles, plat du restaurant Les Coltineurs", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="conteneur duo">
-    <div>
-      <p class="surtitre">La cave</p>
-      <h2>Des vins de petits vignerons, choisis avec soin</h2>
-      <p>Notre carte des vins est exclusivement tournée vers de petits vignerons qui respectent une agriculture et une vinification saines : champagnes, Loire, Bourgogne, Beaujolais, Rhône, Languedoc.</p>
-      <p>En salle, Nicolas aime raconter les domaines qu'il sert : laissez-vous guider pour trouver la bouteille qui accompagnera les plats de Gabin.</p>
-      <div class="boutons">
-        <a class="bouton" href="/carte-des-vins/">La carte des vins</a>
-      </div>
-    </div>
-    <div>
-      {% image "plat-homard-tagliatelles.jpg", "Homard bleu rôti sur des tagliatelles, sauce mousseuse et cerfeuil", "(max-width: 50rem) 100vw, 40vw", [400, 800] %}
+    <div class="paire">
+      {% image "plat-ris-de-veau-morilles.jpg", "Cœur de ris de veau doré et sauce crémée aux morilles, plat du restaurant Les Coltineurs", "(max-width: 50rem) 45vw, 22vw", [400, 800] %}
+      {% image "plat-homard-tagliatelles.jpg", "Homard bleu rôti sur des tagliatelles, sauce mousseuse et cerfeuil", "(max-width: 50rem) 45vw, 22vw", [400, 800] %}
     </div>
   </div>
 </section>
 
 <section class="section section--papier">
-  <div class="conteneur duo duo--inverse">
+  <div class="conteneur etroit centre">
+    <svg class="picto" aria-hidden="true" width="40" height="72" viewBox="0 0 40 72" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M15 4h10v16c0 4 7 8 7 16v30a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V36c0-8 7-12 7-16z"/><path d="M8 44h24"/></svg>
+    <p class="surtitre">La cave de Nicolas</p>
+    <h2>Des vins de petits vignerons, <em>choisis avec soin</em></h2>
+    <p>Notre carte des vins est exclusivement tournée vers de petits vignerons qui respectent une agriculture et une vinification saines : champagnes, Loire, Bourgogne, Beaujolais, Rhône, Languedoc.</p>
+    <p>En salle, Nicolas aime raconter les domaines qu'il sert : laissez-vous guider pour trouver la bouteille qui accompagnera les plats de Gabin.</p>
+    <div class="boutons centre">
+      <a class="bouton" href="/carte-des-vins/">La carte des vins</a>
+    </div>
+  </div>
+</section>
+
+<section class="bandeau-tomate">
+  <div class="conteneur">
     <div>
-      <p class="surtitre">Événements</p>
       <h2>Groupes et privatisation dans le 16ᵉ</h2>
-      <p>Anniversaire, repas d'entreprise, fête de famille : privatisez le restaurant entier tous les jours de la semaine, midi ou soir, à partir de 1 500 €. Vous préférez garder l'ambiance de la salle ? Nous accueillons aussi les groupes avec une formule adaptée.</p>
-      <div class="boutons">
-        <a class="bouton" href="/privatisation/">Privatiser Les Coltineurs</a>
-      </div>
+      <p>Anniversaire, repas d'entreprise, fête de famille : privatisez le restaurant entier tous les jours de la semaine, midi ou soir, à partir de 1 500 €. Nous accueillons aussi les groupes avec une formule adaptée.</p>
     </div>
-    <div>
-      {% image "salle-interieur.jpg", "Les banquettes et les cadres de la salle des Coltineurs, à privatiser pour un événement", "(max-width: 50rem) 100vw, 40vw", [480, 800] %}
-    </div>
+    <a class="bouton bouton--clair" href="/privatisation/">Privatiser Les Coltineurs</a>
   </div>
 </section>
 
 <section class="section section--vert" id="infos">
   <div class="conteneur">
-    <p class="surtitre" style="color:#e9c77f">Infos pratiques</p>
+    <p class="surtitre">Infos pratiques</p>
     <h2>Venir aux Coltineurs, avenue de Versailles</h2>
     <div class="infos">
       <div>

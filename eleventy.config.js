@@ -109,6 +109,13 @@ export default function (eleventyConfig) {
       acceptedAnswer: { "@type": "Answer", text: q.reponse },
     })),
   }));
+  // Ardoise de l'accueil : le premier plat de chaque catégorie du menu (5 au maximum).
+  eleventyConfig.addFilter("ardoise", (menu, max = 5) =>
+    (menu?.categories || [])
+      .map((c) => c.sousCategories.flatMap((s) => s.plats)[0])
+      .filter(Boolean)
+      .slice(0, max)
+  );
   eleventyConfig.addFilter("isoDate", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addFilter("annee", () => new Date().getFullYear());
 
@@ -116,11 +123,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "/css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "/js" });
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2": "/fonts/fraunces-latin-wght-normal.woff2",
-    "node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-italic.woff2": "/fonts/fraunces-latin-wght-italic.woff2",
-    "node_modules/@fontsource/work-sans/files/work-sans-latin-400-normal.woff2": "/fonts/work-sans-latin-400-normal.woff2",
-    "node_modules/@fontsource/work-sans/files/work-sans-latin-500-normal.woff2": "/fonts/work-sans-latin-500-normal.woff2",
-    "node_modules/@fontsource/work-sans/files/work-sans-latin-600-normal.woff2": "/fonts/work-sans-latin-600-normal.woff2",
+    "node_modules/@fontsource/libre-caslon-text/files/libre-caslon-text-latin-400-normal.woff2": "/fonts/caslon-400-normal.woff2",
+    "node_modules/@fontsource/libre-caslon-text/files/libre-caslon-text-latin-400-italic.woff2": "/fonts/caslon-400-italic.woff2",
+    "node_modules/@fontsource/libre-caslon-text/files/libre-caslon-text-latin-700-normal.woff2": "/fonts/caslon-700-normal.woff2",
+    "node_modules/@fontsource/karla/files/karla-latin-400-normal.woff2": "/fonts/karla-400-normal.woff2",
+    "node_modules/@fontsource/karla/files/karla-latin-500-normal.woff2": "/fonts/karla-500-normal.woff2",
+    "node_modules/@fontsource/karla/files/karla-latin-600-normal.woff2": "/fonts/karla-600-normal.woff2",
   });
 
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v, null, 2).replace(/</g, "\\u003c"));
