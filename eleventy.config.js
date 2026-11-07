@@ -123,12 +123,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "/css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "/js" });
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource/libre-caslon-text/files/libre-caslon-text-latin-400-normal.woff2": "/fonts/caslon-400-normal.woff2",
-    "node_modules/@fontsource/libre-caslon-text/files/libre-caslon-text-latin-400-italic.woff2": "/fonts/caslon-400-italic.woff2",
-    "node_modules/@fontsource/libre-caslon-text/files/libre-caslon-text-latin-700-normal.woff2": "/fonts/caslon-700-normal.woff2",
-    "node_modules/@fontsource/karla/files/karla-latin-400-normal.woff2": "/fonts/karla-400-normal.woff2",
-    "node_modules/@fontsource/karla/files/karla-latin-500-normal.woff2": "/fonts/karla-500-normal.woff2",
-    "node_modules/@fontsource/karla/files/karla-latin-600-normal.woff2": "/fonts/karla-600-normal.woff2",
+    "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-400-normal.woff2": "/fonts/cormorant-400-normal.woff2",
+    "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-400-italic.woff2": "/fonts/cormorant-400-italic.woff2",
+    "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-normal.woff2": "/fonts/cormorant-500-normal.woff2",
+    "node_modules/@fontsource/jost/files/jost-latin-300-normal.woff2": "/fonts/jost-300-normal.woff2",
+    "node_modules/@fontsource/jost/files/jost-latin-400-normal.woff2": "/fonts/jost-400-normal.woff2",
+    "node_modules/@fontsource/jost/files/jost-latin-500-normal.woff2": "/fonts/jost-500-normal.woff2",
   });
 
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v, null, 2).replace(/</g, "\\u003c"));
