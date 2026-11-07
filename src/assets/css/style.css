@@ -182,7 +182,7 @@ p { margin: 0 0 1em; }
 .ardoise__plats { list-style: none; margin: 2rem 0 0.5rem; padding: 0; display: grid; gap: 1.1rem; }
 .ardoise__plats li { display: flex; align-items: baseline; gap: 0.75rem; font-family: var(--titre); font-size: 1.4rem; color: var(--vert); line-height: 1.3; }
 .ardoise__plats .points { flex: 1; min-width: 1.5rem; border-bottom: 1px dotted var(--or); transform: translateY(-0.3em); }
-.ardoise__plats li span:last-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ardoise__plats li span:last-child { white-space: nowrap; font-variant-numeric: lining-nums tabular-nums; }
 
 /* Blocs texte + image */
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 7vw, 5.5rem); align-items: center; }
@@ -231,7 +231,7 @@ p { margin: 0 0 1em; }
 .plat { display: grid; grid-template-columns: 1fr auto; gap: 0.15rem 1.5rem; padding: 0.85rem 0; border-bottom: 1px dotted var(--or); }
 .plat:last-child { border-bottom: 0; }
 .plat__nom { font-family: var(--titre); font-size: 1.35rem; font-weight: 500; color: var(--vert); line-height: 1.3; }
-.plat__prix { font-family: var(--titre); font-size: 1.3rem; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; color: var(--vert); }
+.plat__prix { font-family: var(--titre); font-size: 1.3rem; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; text-align: right; color: var(--vert); }
 .plat__detail { grid-column: 1 / -1; color: var(--gris); font-size: 0.95rem; margin: 0; }
 .plat__detail span + span::before { content: " · "; }
 .carte__note { text-align: center; color: var(--gris); font-size: 0.9rem; margin-top: 2.5rem; }

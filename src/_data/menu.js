@@ -12,7 +12,10 @@ export default async function () {
       sousCategorie: r["Sous-catégorie"],
       nom: r.Plat,
       detail: r["Détail"],
-      prix: formatPrice(r.Prix),
+      // Colonne « Unité » facultative (ex. « / 100 g ») ajoutée après le prix.
+      prix: [formatPrice(r.Prix), r["Unité"]].filter(Boolean).join(" "),
+      // Colonne « Accueil » facultative : « oui » = plat mis en avant sur l'ardoise de l'accueil.
+      accueil: (r.Accueil || "").toLowerCase() === "oui",
       prixNum: numericPrice(r.Prix),
     }));
 

@@ -110,12 +110,19 @@ export default function (eleventyConfig) {
     })),
   }));
   // Ardoise de l'accueil : le premier plat de chaque catégorie du menu (5 au maximum).
-  eleventyConfig.addFilter("ardoise", (menu, max = 5) =>
-    (menu?.categories || [])
+  // Ardoise de l'accueil : les plats marqués « oui » dans la colonne « Accueil » du Sheet.
+  // Si aucun n'est marqué : le premier plat de chaque catégorie, hors boissons.
+  eleventyConfig.addFilter("ardoise", (menu, max = 6) => {
+    const categories = menu?.categories || [];
+    const tous = categories.flatMap((c) => c.sousCategories.flatMap((s) => s.plats));
+    const choisis = tous.filter((p) => p.accueil);
+    if (choisis.length) return choisis.slice(0, max);
+    return categories
+      .filter((c) => !/boisson/i.test(c.nom))
       .map((c) => c.sousCategories.flatMap((s) => s.plats)[0])
       .filter(Boolean)
-      .slice(0, max)
-  );
+      .slice(0, max);
+  });
   // « 2026-04-29 » ou « 2026-04 » → « avril 2026 »
   eleventyConfig.addFilter("moisAnnee", (d) => {
     const [a, m] = String(d).split("-");
