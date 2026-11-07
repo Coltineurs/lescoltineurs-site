@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: Cœur de ris de veau à Paris 16e
+permalink: /coeur-de-ris-de-veau/
+alternate: /en/veal-sweetbreads/
+description: "Le cœur de ris de veau, plat signature des Coltineurs (Paris 16e) : aux morilles, en surf & turf avec homard bleu, en tempura sauce gribiche. Bistrot avenue de Versailles."
+ogImage: plat-ris-de-veau-morilles.jpg
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">Plat signature</p>
+  <h1>Le cœur de ris de veau, <em>notre grand classique</em></h1>
+  <p class="chapo">Doré, fondant à cœur, servi avec des morilles ou marié au homard bleu : le ris de veau est l'un des plats qui font revenir nos habitués avenue de Versailles.</p>
+</header>
+
+<section class="section" style="padding-top:1rem">
+  <div class="conteneur duo">
+    <div>
+      {% image "plat-ris-de-veau-morilles.jpg", "Cœur de ris de veau doré et sauce crémée aux morilles, aux Coltineurs, Paris 16e", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
+    </div>
+    <div>
+      <h2>La façon de Gabin</h2>
+      <p>Le ris de veau est un produit noble de la cuisine française, et l'un des plus délicats à travailler. Gabin travaille le cœur de ris, la partie la plus tendre : doré à l'extérieur, fondant à l'intérieur.</p>
+      <p>Il le sert en grand classique, avec une sauce crémée aux morilles. Et parce qu'il aime marier la terre et la mer, il le propose aussi en <strong>surf & turf avec du homard bleu</strong>, nappé d'un jus de veau et de crustacé réduit : un plat salué par Le Parisien.</p>
+      <p>Le ris de veau se décline aussi en entrée, en tempura avec une sauce gribiche, ou dans notre « sweetbreads hamburger ».</p>
+    </div>
+  </div>
+</section>
+
+{%- set plats = menu | platsContenant("ris de veau") %}
+{%- if plats.length %}
+<section class="section section--papier">
+  <div class="conteneur etroit">
+    <p class="surtitre centre">À la carte en ce moment</p>
+    <h2 class="centre">Le ris de veau au menu</h2>
+    <ul class="ardoise__plats">
+      {%- for p in plats %}
+      <li><span>{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span>{{ p.prix }}</span></li>
+      {%- endfor %}
+    </ul>
+    <p class="centre" style="margin-top:1.5rem; color: var(--gris)">La carte change au fil des saisons : appelez-nous pour savoir ce que Gabin prépare cette semaine.</p>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section">
+  <div class="conteneur etroit faq">
+    <h2 class="centre">Bon à savoir</h2>
+    <details>
+      <summary>Qu'est-ce que le ris de veau ?</summary>
+      <p>C'est le thymus du veau, une glande située à la base du cou, très appréciée en gastronomie française pour sa texture fondante et son goût délicat. Le « cœur » de ris est la partie la plus ronde et la plus tendre.</p>
+    </details>
+    <details>
+      <summary>Faut-il réserver pour manger du ris de veau aux Coltineurs ?</summary>
+      <p>La carte change au fil des saisons. Pour être sûr de trouver le ris de veau, appelez-nous au {{ site.telephone }} ou réservez en le précisant en commentaire.</p>
+    </details>
+  </div>
+  <div class="boutons centre">
+    <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
+    <a class="bouton" href="/menu/">Tout le menu</a>
+  </div>
+</section>

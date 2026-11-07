@@ -1,0 +1,36 @@
+---
+layout: base.njk
+langue: en
+title: Press, as seen in
+permalink: /en/press/
+alternate: /presse/
+description: "Les Coltineurs in the press: Le Parisien, Marie Claire, Gilles Pudlowski, Mensup, Bonjour Paris… What critics and guides say about our bistro in Paris 16th."
+ogImage: salle-interieur.jpg
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">Press</p>
+  <h1>What they say <em>about Les Coltineurs</em></h1>
+  <p class="chapo">Journalists, critics and guides have walked through the door of 97 avenue de Versailles. Here is what they thought. Most articles are in French.</p>
+</header>
+
+<section class="section" style="padding-top:1rem">
+  <div class="conteneur etroit">
+    <ol class="presse">
+      {%- for a in presse %}
+      <li class="presse__article">
+        <p class="presse__media">{{ a.media }} <span>· {{ a.date | moisAnnee("en") }}</span></p>
+        {% if a.citation %}<blockquote lang="{{ a.langue or 'fr' }}"><p>“{{ a.citation }}”</p></blockquote>{% endif %}
+        <p class="presse__titre"><a href="{{ a.url }}" rel="noopener" lang="{{ a.langue or 'fr' }}">{{ a.titre }}</a>{% if a.auteur %}, by {{ a.auteur }}{% endif %}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--vert">
+  <div class="conteneur etroit centre">
+    <p class="surtitre">Journalists</p>
+    <h2>Writing a story?</h2>
+    <p>Gabin and Nicolas will be delighted to welcome you. For an interview, high-resolution photos or a visit, email <a href="mailto:{{ site.emailContact }}?subject=Press%20Les%20Coltineurs">{{ site.emailContact }}</a> or call <a href="tel:{{ site.telephoneIntl }}">+33 1 45 27 15 74</a>.</p>
+  </div>
+</section>

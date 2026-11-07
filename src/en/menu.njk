@@ -1,0 +1,49 @@
+---
+layout: base.njk
+langue: en
+title: Menu, French bistro in Paris 16th
+permalink: /en/menu/
+alternate: /menu/
+description: "The menu at Les Coltineurs, French bistro in Paris 16th near the Eiffel Tower: seasonal starters, fish, meat, cheese and desserts, veal sweetbreads, blue lobster."
+ogImage: plat-ris-de-veau-morilles.jpg
+jsonld: menu
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">À la carte</p>
+  <h1>The menu</h1>
+  <p class="chapo">The menu changes with the seasons and the market. Dish names are in French: ask us anything about a dish or an allergen, we will gladly explain in English.</p>
+</header>
+
+<div class="conteneur etroit">
+  <ul class="sommaire" aria-label="Menu sections">
+    {%- for c in menu.categories %}<li><a href="#{{ c.id }}">{{ c.nom | trad }}</a></li>{% endfor %}
+  </ul>
+
+  <div class="carte">
+    {%- for c in menu.categories %}
+    <section class="carte__categorie" id="{{ c.id }}" aria-labelledby="t-{{ c.id }}">
+      <h2 id="t-{{ c.id }}">{{ c.nom | trad }}</h2>
+      {%- for s in c.sousCategories %}
+      <div class="carte__groupe">
+        {% if s.nom %}<h3>{{ s.nom | trad }}</h3>{% endif %}
+        <ul class="plats">
+          {%- for p in s.plats %}
+          <li class="plat">
+            <span class="plat__nom" lang="fr">{{ p.nom }}</span>
+            <span class="plat__prix">{{ p.prix }}</span>
+            {% if p.detail %}<p class="plat__detail" lang="fr">{{ p.detail }}</p>{% endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </section>
+    {%- endfor %}
+    <p class="carte__note">Prices in euros, service included. Allergen information is available on request.</p>
+  </div>
+
+  <div class="boutons" style="justify-content:center; margin: 2.5rem 0 4rem;">
+    <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
+    <a class="bouton" href="/en/wine-list/">The wine list</a>
+  </div>
+</div>

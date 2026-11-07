@@ -1,0 +1,52 @@
+---
+layout: base.njk
+langue: en
+title: Wine list, natural wines from small growers
+permalink: /en/wine-list/
+alternate: /carte-des-vins/
+description: "The wine list at Les Coltineurs, Paris 16th: Champagne and natural wines from small growers in the Loire, Burgundy, Beaujolais, Rhône and Languedoc."
+ogImage: illustration-salle-aquarelle.jpg
+jsonld: vins
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">The cellar</p>
+  <h1>The wine list</h1>
+  <p class="chapo">Exclusively small growers who farm and make their wines with care. Respect for the land and the terroir, right down to the glass.</p>
+</header>
+
+<div class="conteneur etroit">
+  <ul class="sommaire" aria-label="Wine list sections">
+    {%- for c in vins.categories %}<li><a href="#{{ c.id }}">{{ c.nom | trad }}</a></li>{% endfor %}
+  </ul>
+
+  <div class="carte">
+    {%- for c in vins.categories %}
+    <section class="carte__categorie" id="{{ c.id }}" aria-labelledby="t-{{ c.id }}">
+      <h2 id="t-{{ c.id }}">{{ c.nom | trad }}</h2>
+      {%- for r in c.regions %}
+      <div class="carte__groupe">
+        {% if r.nom %}<h3>{{ r.nom | trad }}</h3>{% endif %}
+        {%- for s in r.secteurs %}
+        {% if s.nom and s.nom != r.nom %}<p class="carte__secteur">{{ s.nom | trad }}</p>{% endif %}
+        <ul class="plats">
+          {%- for v in s.vins %}
+          <li class="plat">
+            <span class="plat__nom">{{ v.domaine }}{% if v.domaine and v.cuvee %} · {% endif %}{{ v.cuvee }}{% if v.contenance %} ({{ v.contenance }}){% endif %}</span>
+            <span class="plat__prix">{{ v.prix }}</span>
+            <p class="plat__detail">{% if v.appellation %}<span>{{ v.appellation }}</span>{% endif %}{% if v.cepages %}<span>{{ v.cepages }}</span>{% endif %}{% if v.millesime %}<span>{{ v.millesime }}</span>{% endif %}{% if v.detail %}<span>{{ v.detail }}</span>{% endif %}</p>
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- endfor %}
+      </div>
+      {%- endfor %}
+    </section>
+    {%- endfor %}
+    <p class="carte__note">Prices in euros, service included. 75 cl bottles unless stated.<br>Please drink responsibly.</p>
+  </div>
+
+  <div class="boutons" style="justify-content:center; margin: 2.5rem 0 4rem;">
+    <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
+    <a class="bouton" href="/en/menu/">The menu</a>
+  </div>
+</div>

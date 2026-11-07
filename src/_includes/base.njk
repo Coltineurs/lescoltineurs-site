@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="fr">
+{%- set t = i18n[langue or "fr"] %}
+<html lang="{{ t.langue }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- set pageTitle = (title + " · " + site.nom) if title else (site.nom + " · " + site.slogan) %}
+  {%- set pageTitle = (title + " · " + site.nom) if title else (site.nom + " · " + t.slogan) %}
   {%- set pageDescription = description or site.description %}
   {%- set canonical = page.url | absolute(site.url) %}
   <title>{{ pageTitle }}</title>
@@ -11,7 +12,12 @@
   <link rel="canonical" href="{{ canonical }}">
   {% if noindex %}<meta name="robots" content="noindex">{% endif %}
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale" content="{{ t.locale }}">
+  {%- if alternate %}
+  <link rel="alternate" hreflang="{{ t.langue }}" href="{{ canonical }}">
+  <link rel="alternate" hreflang="{{ 'fr' if t.langue == 'en' else 'en' }}" href="{{ alternate | absolute(site.url) }}">
+  <link rel="alternate" hreflang="x-default" href="{{ (page.url if t.langue == 'fr' else alternate) | absolute(site.url) }}">
+  {%- endif %}
   <meta property="og:site_name" content="{{ site.nom }}">
   <meta property="og:title" content="{{ title or site.nom }}">
   <meta property="og:description" content="{{ pageDescription }}">
@@ -28,24 +34,25 @@
   {% if ld %}<script type="application/ld+json">{{ ld | json | safe }}</script>{% endif %}
 </head>
 <body class="page-{{ bodyClass or 'interieure' }}">
-  <a class="skip" href="#contenu">Aller au contenu</a>
+  <a class="skip" href="#contenu">{{ t.allerContenu }}</a>
   {% if site.annonce %}<p class="annonce">{{ site.annonce }}</p>{% endif %}
   <header class="entete">
     <div class="entete__inner">
-      <a class="entete__logo" href="/" aria-label="{{ site.nom }}, accueil">
+      <a class="entete__logo" href="{{ t.accueil }}" aria-label="{{ site.nom }}, {{ t.accueilLabel }}">
         <img src="{{ 'logo.jpg' | imageUrlSync(600) }}" alt="" width="64" height="64">
         <span>Les Coltineurs</span>
       </a>
-      <nav class="nav" aria-label="Navigation principale">
+      <nav class="nav" aria-label="{{ t.navLabel }}">
         <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
-        <label for="nav-toggle" class="nav__burger"><span class="sr">Ouvrir le menu</span><span aria-hidden="true"></span></label>
+        <label for="nav-toggle" class="nav__burger"><span class="sr">{{ t.ouvrirMenu }}</span><span aria-hidden="true"></span></label>
         <ul class="nav__liste">
-          {%- for item in site.navigation %}
+          {%- for item in t.navigation %}
           <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.titre }}</a></li>
           {%- endfor %}
+          <li><a class="nav__langue" href="{{ alternate or t.autreLangue.accueil }}" hreflang="{{ t.autreLangue.code | lower }}" lang="{{ t.autreLangue.code | lower }}" aria-label="{{ t.autreLangue.label }}">{{ t.autreLangue.code }}</a></li>
         </ul>
       </nav>
-      <a class="bouton bouton--plein entete__reserver" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver</a>
+      <a class="bouton bouton--plein entete__reserver" href="{{ site.zenchef.reserver }}" rel="noopener">{{ t.reserver }}</a>
     </div>
   </header>
 
@@ -57,35 +64,37 @@
     <div class="pied__inner">
       <div class="pied__bloc">
         <p class="pied__nom">Les Coltineurs</p>
-        <p>Restaurant bistrot de quartier à Paris 16ᵉ.<br>Cuisine française de saison et vins de petits vignerons, par Gabin et Nicolas, aubergistes.<br>Métro Mirabeau · Église d'Auteuil.</p>
+        <p>{{ t.pied.presentation | safe }}</p>
       </div>
       <div class="pied__bloc">
-        <h2>Nous trouver</h2>
+        <h2>{{ t.pied.trouver }}</h2>
         <address>
           <a href="{{ site.carte }}" rel="noopener">{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}</a><br>
           <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a>
         </address>
       </div>
       <div class="pied__bloc">
-        <h2>Horaires</h2>
-        <p>Du mardi au samedi<br>12h – 14h30 · 18h30 – 23h<br>Fermé dimanche et lundi</p>
+        <h2>{{ t.pied.horaires }}</h2>
+        <p>{{ t.pied.horairesTexte | safe }}</p>
       </div>
       <div class="pied__bloc">
-        <h2>Suivez-nous</h2>
-        <p><a href="{{ site.instagram }}" rel="noopener">Instagram @lescoltineurs</a><br>
-        <a href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a><br>
-        <a href="/privatisation/">Privatiser le restaurant</a><br>
-        <a href="/presse/">Presse</a></p>
+        <h2>{{ t.pied.suivre }}</h2>
+        <p><a href="{{ site.instagram }}" rel="noopener">Instagram @lescoltineurs</a>
+        {%- for l in t.pied.liens %}<br>
+        <a href="{{ site.zenchef.reserver if l.url == 'zenchef' else l.url }}"{% if l.url == 'zenchef' %} rel="noopener"{% endif %}>{{ l.titre }}</a>
+        {%- endfor %}
+        {%- if site.carteCadeau %}<br>
+        <a href="{{ site.carteCadeau }}" rel="noopener">{{ "Gift card" if t.langue == "en" else "Offrir une carte cadeau" }}</a>{% endif %}</p>
       </div>
     </div>
-    <p class="pied__legal"><a href="/mentions-legales/">Mentions légales</a> · {% if site.googleAds or site.googleAnalytics %}<button type="button" class="lien" data-consentement="gerer">Gérer les cookies</button> · {% endif %} © {{ "now" | annee }} Les Coltineurs</p>
+    <p class="pied__legal"><a href="/mentions-legales/">{{ t.pied.mentions }}</a> · {% if site.googleAds or site.googleAnalytics %}<button type="button" class="lien" data-consentement="gerer">{{ t.pied.cookies }}</button> · {% endif %} © {{ "now" | annee }} Les Coltineurs</p>
   </footer>
   {%- if site.googleAds or site.googleAnalytics %}
   <div id="consentement" class="consentement" role="dialog" aria-live="polite" aria-label="Cookies" data-google-ads="{{ site.googleAds }}" data-google-analytics="{{ site.googleAnalytics }}" hidden>
-    <p>Avec votre accord, nous utilisons des cookies Google pour compter les visites et mesurer l'efficacité de nos publicités. Rien n'est revendu, et le site fonctionne de la même façon si vous refusez. <a href="/mentions-legales/#cookies">En savoir plus</a></p>
+    <p>{{ t.consentement.texte }} <a href="/mentions-legales/#cookies">{{ t.consentement.plus }}</a></p>
     <div class="consentement__boutons">
-      <button type="button" class="bouton" data-consentement="refuse">Refuser</button>
-      <button type="button" class="bouton" data-consentement="accepte">Accepter</button>
+      <button type="button" class="bouton" data-consentement="refuse">{{ t.consentement.refuser }}</button>
+      <button type="button" class="bouton" data-consentement="accepte">{{ t.consentement.accepter }}</button>
     </div>
   </div>
   <script src="/js/consentement.js" defer></script>

@@ -124,11 +124,28 @@ export default function (eleventyConfig) {
       .slice(0, max);
   });
   // « 2026-04-29 » ou « 2026-04 » → « avril 2026 »
-  eleventyConfig.addFilter("moisAnnee", (d) => {
+  eleventyConfig.addFilter("moisAnnee", (d, langue = "fr") => {
     const [a, m] = String(d).split("-");
-    const mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+    const mois = langue === "en"
+      ? ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      : ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
     return m ? `${mois[Number(m) - 1]} ${a}` : a;
   });
+  // Traduction des rubriques du Sheet pour les pages en anglais (le reste reste en français).
+  const TRAD = {
+    "Entrées": "Starters", "Plats": "Mains", "Poissons": "Fish", "Viandes": "Meat", "Fromage": "Cheese", "Fromages": "Cheese",
+    "Desserts": "Desserts", "Boissons": "Drinks", "Boissons chaudes": "Hot drinks", "Eaux": "Water", "Softs": "Soft drinks",
+    "Surf & Turf": "Surf & Turf", "Vins": "Wines", "Champagnes": "Champagne", "Blancs": "White wines", "Rouges": "Red wines",
+    "Rosés": "Rosé wines", "Bulles": "Sparkling", "Vins blancs": "White wines", "Vins rouges": "Red wines", "Vins rosés": "Rosé wines",
+    "Au verre": "By the glass", "Macérations": "Skin-contact wines", "Italie": "Italy", "Rosé": "Rosé", "Blanc": "White", "Rouge": "Red", "Bourgogne": "Burgundy", "Sud-Ouest": "South-West", "Rhône nord": "Northern Rhône", "Rhône sud": "Southern Rhône", "Crus du Beaujolais": "Beaujolais crus", "Magnums": "Magnums", "Digestifs": "Digestifs", "Apéritifs": "Aperitifs",
+  };
+  eleventyConfig.addFilter("trad", (s) => TRAD[s] || s);
+  // Plats du menu dont le nom contient un mot (sans tenir compte des accents ni des majuscules).
+  const sansAccent = (s) => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  eleventyConfig.addFilter("platsContenant", (menu, mot) =>
+    (menu?.categories || []).flatMap((c) => c.sousCategories.flatMap((s) => s.plats))
+      .filter((p) => sansAccent(p.nom).includes(sansAccent(mot)))
+  );
   eleventyConfig.addFilter("isoDate", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addFilter("annee", () => new Date().getFullYear());
 

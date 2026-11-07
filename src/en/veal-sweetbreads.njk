@@ -1,0 +1,61 @@
+---
+layout: base.njk
+langue: en
+title: Veal sweetbreads in Paris 16th
+permalink: /en/veal-sweetbreads/
+alternate: /coeur-de-ris-de-veau/
+description: "Veal sweetbreads, the signature dish at Les Coltineurs (Paris 16th, near the Eiffel Tower): with morels, as a surf & turf with blue lobster, or as tempura with gribiche sauce."
+ogImage: plat-ris-de-veau-morilles.jpg
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">Signature dish</p>
+  <h1>Veal sweetbreads, <em>our great classic</em></h1>
+  <p class="chapo">Golden and crisp outside, meltingly tender within, served with morels or paired with blue lobster: <span lang="fr">ris de veau</span> is one of the dishes that keeps our regulars coming back.</p>
+</header>
+
+<section class="section" style="padding-top:1rem">
+  <div class="conteneur duo">
+    <div>
+      {% image "plat-ris-de-veau-morilles.jpg", "Golden veal sweetbread heart with a creamy morel sauce at Les Coltineurs, Paris 16th", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
+    </div>
+    <div>
+      <h2>Gabin's way</h2>
+      <p>Veal sweetbreads are one of the noblest ingredients in French cooking, and one of the most delicate to prepare. Gabin works with the heart of the sweetbread, the most tender part: golden outside, melting inside.</p>
+      <p>He serves it the classic way, with a creamy morel sauce. And because he loves bringing land and sea together, he also offers it as a <strong>surf & turf with blue lobster</strong>, glazed with a reduced veal and shellfish jus, a dish praised by Le Parisien.</p>
+      <p>Sweetbreads also appear as a starter, in tempura with gribiche sauce, or in our “sweetbreads hamburger”.</p>
+    </div>
+  </div>
+</section>
+
+{%- set plats = menu | platsContenant("ris de veau") %}
+{%- if plats.length %}
+<section class="section section--papier">
+  <div class="conteneur etroit">
+    <p class="surtitre centre">On the menu right now</p>
+    <ul class="ardoise__plats">
+      {%- for p in plats %}
+      <li><span lang="fr">{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span>{{ p.prix }}</span></li>
+      {%- endfor %}
+    </ul>
+    <p class="centre" style="margin-top:1.5rem; color: var(--gris)">The menu changes with the seasons: call us to find out what Gabin is cooking this week.</p>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section">
+  <div class="conteneur etroit faq">
+    <h2 class="centre">Good to know</h2>
+    <details>
+      <summary>What are veal sweetbreads?</summary>
+      <p>Sweetbreads (<span lang="fr">ris de veau</span>) are the thymus gland of the calf, prized in French gastronomy for their tender texture and delicate flavour. The “heart” is the roundest, most tender part.</p>
+    </details>
+    <details>
+      <summary>Should I book to have sweetbreads at Les Coltineurs?</summary>
+      <p>The menu changes with the seasons. To be sure, call us on +33 1 45 27 15 74 or mention it in the comments when you book.</p>
+    </details>
+  </div>
+  <div class="boutons centre">
+    <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
+    <a class="bouton" href="/en/menu/">Full menu</a>
+  </div>
+</section>

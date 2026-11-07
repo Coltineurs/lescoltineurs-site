@@ -1,0 +1,50 @@
+---
+layout: base.njk
+langue: en
+title: Razor clams with persillade and chorizo in Paris 16th
+permalink: /en/razor-clams-chorizo/
+alternate: /couteaux-persillade-chorizo/
+description: "Razor clams with garlic-parsley persillade and chorizo at Les Coltineurs, Paris 16th: the surf & turf starter featured in Le Parisien and Marie Claire."
+ogImage: salle-coltineurs.jpg
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">Signature dish</p>
+  <h1>Razor clams, persillade <em>and chorizo</em></h1>
+  <p class="chapo">The land-and-sea starter that sums up Gabin's cooking: shellfish, garlic and parsley butter, and the gentle heat of grilled chorizo.</p>
+</header>
+
+<section class="section" style="padding-top:1rem">
+  <div class="conteneur duo">
+    <div>
+      <h2>Sea and land on the same plate</h2>
+      <p>Razor clams (<span lang="fr">couteaux</span>) are long, slender shellfish with fine, slightly sweet flesh. Gabin prepares them with a persillade, the classic French mix of garlic and parsley, and lifts them with chorizo.</p>
+      <p>Pairing sea and land is the signature of Les Coltineurs. Le Parisien featured the dish in its story on surf & turf cooking, and Marie Claire listed it among the house's indulgent dishes to share.</p>
+      <p>Share it over an aperitif with a glass of Loire white, or as a starter before the veal sweetbreads.</p>
+    </div>
+    <div>
+      {% image "salle-coltineurs.jpg", "The dining room at Les Coltineurs, a bistro on avenue de Versailles, Paris 16th", "(max-width: 50rem) 100vw, 40vw", [640, 1080] %}
+    </div>
+  </div>
+</section>
+
+{%- set plats = menu | platsContenant("couteaux") %}
+{%- if plats.length %}
+<section class="section section--papier">
+  <div class="conteneur etroit">
+    <p class="surtitre centre">On the menu right now</p>
+    <ul class="ardoise__plats">
+      {%- for p in plats %}
+      <li><span lang="fr">{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span>{{ p.prix }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section">
+  <div class="boutons centre">
+    <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
+    <a class="bouton" href="/en/veal-sweetbreads/">Our veal sweetbreads</a>
+    <a class="bouton" href="/en/menu/">Full menu</a>
+  </div>
+</section>
