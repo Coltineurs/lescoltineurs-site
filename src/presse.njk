@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Presse, ils parlent de nous
+permalink: /presse/
+description: "Les Coltineurs dans la presse : Le Parisien, Marie Claire, Gilles Pudlowski, Mensup… Ce que disent journalistes et guides de notre bistrot de Paris 16e."
+ogImage: salle-interieur.jpg
+---
+<header class="titre-page conteneur">
+  <p class="surtitre">Presse</p>
+  <h1>Ils parlent <em>des Coltineurs</em></h1>
+  <p class="chapo">Journalistes, critiques et guides ont poussé la porte du 97 avenue de Versailles. Voici ce qu'ils en ont pensé.</p>
+</header>
+
+<section class="section" style="padding-top:1rem">
+  <div class="conteneur etroit">
+    <ol class="presse">
+      {%- for a in presse %}
+      <li class="presse__article">
+        <p class="presse__media">{{ a.media }} <span>· {{ a.date | moisAnnee }}</span></p>
+        {% if a.citation %}<blockquote{% if a.langue %} lang="{{ a.langue }}"{% endif %}><p>« {{ a.citation }} »</p></blockquote>{% endif %}
+        <p class="presse__titre"><a href="{{ a.url }}" rel="noopener"{% if a.langue %} lang="{{ a.langue }}"{% endif %}>{{ a.titre }}</a>{% if a.auteur %}, par {{ a.auteur }}{% endif %}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--vert">
+  <div class="conteneur etroit centre">
+    <p class="surtitre">Journalistes</p>
+    <h2>Vous préparez un article ?</h2>
+    <p>Gabin et Nicolas se feront un plaisir de vous recevoir. Pour une interview, des photos en haute définition ou une visite, écrivez-nous à <a href="mailto:{{ site.emailContact }}?subject=Presse%20Les%20Coltineurs">{{ site.emailContact }}</a> ou appelez le <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a>.</p>
+  </div>
+</section>

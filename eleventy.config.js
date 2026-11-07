@@ -116,6 +116,12 @@ export default function (eleventyConfig) {
       .filter(Boolean)
       .slice(0, max)
   );
+  // « 2026-04-29 » ou « 2026-04 » → « avril 2026 »
+  eleventyConfig.addFilter("moisAnnee", (d) => {
+    const [a, m] = String(d).split("-");
+    const mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+    return m ? `${mois[Number(m) - 1]} ${a}` : a;
+  });
   eleventyConfig.addFilter("isoDate", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addFilter("annee", () => new Date().getFullYear());
 
