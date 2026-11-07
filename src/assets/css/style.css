@@ -168,7 +168,7 @@ p { margin: 0 0 1em; }
 .hero .chapo { max-width: 40rem; margin: 0 auto; }
 .hero__ouverture { margin: 1.75rem 0 0; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); }
 .hero__image { padding-top: clamp(3rem, 7vw, 4.5rem); padding-bottom: clamp(4rem, 9vw, 6rem); }
-.hero__image img { width: 100%; height: clamp(18rem, 42vw, 36rem); object-fit: cover; }
+.hero__image img { width: 100%; aspect-ratio: 3 / 2; max-height: 44rem; object-fit: cover; object-position: center 60%; }
 
 /* Les deux aubergistes */
 .aubergistes { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 4.5rem); }
