@@ -84,7 +84,8 @@
         <a href="{{ site.zenchef.reserver if l.url == 'zenchef' else l.url }}"{% if l.url == 'zenchef' %} rel="noopener"{% endif %}>{{ l.titre }}</a>
         {%- endfor %}
         {%- if site.carteCadeau %}<br>
-        <a href="{{ site.carteCadeau }}" rel="noopener">{{ "Gift card" if t.langue == "en" else "Offrir une carte cadeau" }}</a>{% endif %}</p>
+        <a href="{{ site.carteCadeau }}" rel="noopener">{{ "Gift card" if t.langue == "en" else "Offrir une carte cadeau" }}</a>{% endif %}<br>
+        <a href="{{ site.homardVolant }}" rel="noopener">{{ t.pied.traiteur }}</a></p>
       </div>
     </div>
     <p class="pied__legal"><a href="/mentions-legales/">{{ t.pied.mentions }}</a> · {% if site.googleAds or site.googleAnalytics %}<button type="button" class="lien" data-consentement="gerer">{{ t.pied.cookies }}</button> · {% endif %} © {{ "now" | annee }} Les Coltineurs</p>
