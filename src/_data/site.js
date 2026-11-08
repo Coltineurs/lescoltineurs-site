@@ -40,6 +40,8 @@ export default {
   annonce: "",
   // Lien de la boutique de cartes cadeaux. Vide = la page /carte-cadeau/ et les liens restent cachés.
   carteCadeau: "",
+  // Service traiteur et événements des Coltineurs.
+  homardVolant: "https://lehomardvolant.fr",
   // Balises Google (chargées uniquement après consentement, voir src/assets/js/consentement.js).
   // Google Analytics 4 : fréquentation et actions clés (Réserver, téléphone, itinéraire, privatisation).
   googleAnalytics: "G-VDSBY52W9K",
