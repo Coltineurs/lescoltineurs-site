@@ -23,6 +23,7 @@ export default {
       horaires: "Horaires",
       horairesTexte: "Du mardi au samedi<br>12h – 14h30 · 18h30 – 23h<br>Fermé dimanche et lundi",
       suivre: "Suivez-nous",
+      traiteur: "Traiteur et événements : Le Homard Volant, le service traiteur des Coltineurs",
       liens: [
         { titre: "Réserver une table", url: "zenchef" },
         { titre: "Privatiser le restaurant", url: "/privatisation/" },
@@ -63,6 +64,7 @@ export default {
       horaires: "Opening hours",
       horairesTexte: "Tuesday to Saturday<br>12pm – 2:30pm · 6:30pm – 11pm<br>Closed Sunday and Monday",
       suivre: "Follow us",
+      traiteur: "Catering and events: Le Homard Volant, the Coltineurs catering service",
       liens: [
         { titre: "Book a table", url: "zenchef" },
         { titre: "Private events", url: "/en/private-events/" },
