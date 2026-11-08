@@ -47,7 +47,7 @@
         <label for="nav-toggle" class="nav__burger"><span class="sr">{{ t.ouvrirMenu }}</span><span aria-hidden="true"></span></label>
         <ul class="nav__liste">
           {%- for item in t.navigation %}
-          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.titre }}</a></li>
+          <li><a href="{{ site.homardVolant if item.url == 'homardVolant' else item.url }}"{% if item.url == 'homardVolant' %} rel="noopener"{% endif %}{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.titre }}</a></li>
           {%- endfor %}
           <li><a class="nav__langue" href="{{ alternate or t.autreLangue.accueil }}" hreflang="{{ t.autreLangue.code | lower }}" lang="{{ t.autreLangue.code | lower }}" aria-label="{{ t.autreLangue.label }}">{{ t.autreLangue.code }}</a></li>
         </ul>
