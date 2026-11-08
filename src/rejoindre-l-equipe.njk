@@ -12,9 +12,13 @@ description: "Recrutement restaurant Paris 16e : Les Coltineurs recrutent en sal
 
 <section class="section" style="padding-top:1rem">
   <div class="conteneur etroit">
-    <form class="formulaire" name="candidature" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="adresse-web" enctype="multipart/form-data">
-      <input type="hidden" name="form-name" value="candidature">
-      <p class="piege"><label>Ne pas remplir : <input name="adresse-web" tabindex="-1" autocomplete="off"></label></p>
+    {#- Envoi par FormSubmit (gratuit) : les candidatures arrivent par e-mail à hello@lescoltineurs.com, CV en pièce jointe. #}
+    <form class="formulaire" name="candidature" method="POST" action="https://formsubmit.co/hello@lescoltineurs.com" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="Nouvelle candidature · Les Coltineurs">
+      <input type="hidden" name="_next" value="{{ '/merci/' | absolute(site.url) }}">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <p class="piege"><label>Ne pas remplir : <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
       <div>
         <label for="nom">Nom et prénom</label>
         <input id="nom" name="nom" type="text" autocomplete="name" required>
@@ -33,8 +37,8 @@ description: "Recrutement restaurant Paris 16e : Les Coltineurs recrutent en sal
       </div>
       <div>
         <label for="cv">CV ou lettre de motivation</label>
-        <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-        <p class="aide">PDF, Word ou image, 8 Mo maximum.</p>
+        <input id="cv" name="attachment" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+        <p class="aide">PDF, Word ou image, 5 Mo maximum.</p>
       </div>
       <p class="aide">Tes informations servent uniquement à traiter ta candidature. Elles ne sont ni revendues ni conservées au-delà du recrutement.</p>
       <button class="bouton bouton--plein" type="submit">Envoyer ma candidature</button>
