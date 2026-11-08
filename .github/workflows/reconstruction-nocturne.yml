@@ -1,20 +1,40 @@
-# Reconstruit le site chaque nuit pour relire le Google Sheet (menu et vins).
-# Le secret NETLIFY_BUILD_HOOK contient l'URL d'un « build hook » Netlify
-# (Site configuration → Build & deploy → Build hooks).
-name: Reconstruction nocturne
+# Republie le site quand le Google Sheet (menu, vins) a changé.
+# Toutes les heures, on télécharge le Sheet et on calcule son empreinte :
+# si elle est identique à la dernière fois, on ne fait rien (aucune publication consommée).
+# Le secret CF_DEPLOY_HOOK contient l'URL d'un « deploy hook » Cloudflare Pages
+# (Workers & Pages → lescoltineurs → Paramètres → Builds → Deploy hooks).
+name: Mise à jour du menu
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # 3h UTC = 4h (hiver) / 5h (été) à Paris
-  workflow_dispatch: {}    # bouton « Run workflow » pour lancer à la main
+    - cron: "17 * * * *"   # toutes les heures
+  workflow_dispatch: {}     # bouton « Run workflow » : force une publication
 
 jobs:
-  rebuild:
+  verifier:
     runs-on: ubuntu-latest
     steps:
-      - name: Déclencher le build Netlify
-        env:
-          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+      - name: Empreinte du Google Sheet
+        id: empreinte
         run: |
-          if [ -z "$HOOK" ]; then echo "Secret NETLIFY_BUILD_HOOK manquant"; exit 1; fi
-          curl -fsS -X POST -d '{}' "$HOOK"
+          ID=1X1HAwsaBtNcbMIZ87RFcRdc-OUADgURRV58w70GBz-k
+          for gid in 307354814 1001; do
+            curl -fsSL "https://docs.google.com/spreadsheets/d/$ID/export?format=csv&gid=$gid"
+          done > sheet.csv
+          echo "hash=$(sha256sum sheet.csv | cut -c1-16)" >> "$GITHUB_OUTPUT"
+
+      - name: Déjà publié ?
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: sheet.csv
+          key: sheet-${{ steps.empreinte.outputs.hash }}
+
+      - name: Publier le site
+        if: steps.cache.outputs.cache-hit != 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          HOOK: ${{ secrets.CF_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "Secret CF_DEPLOY_HOOK manquant"; exit 1; fi
+          curl -fsS -X POST "$HOOK"
+          echo "Sheet modifié : publication lancée."
