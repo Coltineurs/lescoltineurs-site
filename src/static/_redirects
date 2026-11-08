@@ -1,18 +1,8 @@
 # Anciennes adresses du site Squarespace -> nouvelles pages (301 permanentes)
+# (www -> sans www et .fr -> .com se règlent dans Cloudflare, « Redirect Rules »)
 /home        /                      301
 /home/       /                      301
 /team-4      /rejoindre-l-equipe/   301
 /team-4/     /rejoindre-l-equipe/   301
 /cart        /                      301
 /cart/       /                      301
-
-# Adresse principale provisoire : https://lescoltineurs.com (sans www)
-https://www.lescoltineurs.com/*  https://lescoltineurs.com/:splat  301!
-http://www.lescoltineurs.com/*   https://lescoltineurs.com/:splat  301!
-https://lescoltineurs.netlify.app/*  https://lescoltineurs.com/:splat  301!
-
-# Le jour où le .fr pointe vers Netlify : le renvoyer aussi vers l'adresse principale
-https://lescoltineurs.fr/*       https://lescoltineurs.com/:splat  301!
-https://www.lescoltineurs.fr/*   https://lescoltineurs.com/:splat  301!
-http://lescoltineurs.fr/*        https://lescoltineurs.com/:splat  301!
-http://www.lescoltineurs.fr/*    https://lescoltineurs.com/:splat  301!
