@@ -15,6 +15,7 @@ export default {
       { titre: "Carte des vins", url: "/carte-des-vins/" },
       { titre: "Privatisation", url: "/privatisation/" },
       { titre: "Rejoindre l'équipe", url: "/rejoindre-l-equipe/" },
+      { titre: "Traiteur", url: "homardVolant" },
     ],
     autreLangue: { code: "EN", label: "English version", accueil: "/en/" },
     pied: {
@@ -56,6 +57,7 @@ export default {
       { titre: "Wine list", url: "/en/wine-list/" },
       { titre: "Private events", url: "/en/private-events/" },
       { titre: "Press", url: "/en/press/" },
+      { titre: "Catering", url: "homardVolant" },
     ],
     autreLangue: { code: "FR", label: "Version française", accueil: "/" },
     pied: {
