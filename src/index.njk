@@ -1,156 +1,130 @@
 ---
-alternate: /en/
 layout: base.njk
+alternate: /en/
 bodyClass: accueil
-description: "Restaurant bistrot français au 97 avenue de Versailles, Paris 16e (métro Mirabeau). Cuisine de saison de Gabin, salle et vins de Nicolas. Du mardi au samedi."
+description: "Les Coltineurs, bistrot de quartier au 97 avenue de Versailles, Paris 16e (métro Mirabeau). Gabin en cuisine, Nicolas en salle, une carte de saison et des vins de vignerons. Du mardi au samedi."
 jsonld: restaurant
 ---
 <section class="hero">
+  <div class="hero__image">
+    {% image "salle-coltineurs.jpg", "La salle des Coltineurs : banquette en velours vert, tables en bois, cadres anciens aux murs et sol en mosaïque", "100vw", [640, 1080, 1600, 2400], "eager" %}
+  </div>
   <div class="conteneur hero__texte">
-    <p class="surtitre">Restaurant · Bistrot français · Paris 16ᵉ · Avenue de Versailles</p>
-    <h1>Les Coltineurs, bistrot de quartier <em>où l'on se sent attendu</em></h1>
-    <span class="filet" aria-hidden="true"></span>
-    <p class="chapo">Gabin en cuisine, Nicolas en salle : deux vrais aubergistes, une cuisine française de saison généreuse et sans chichi, et des vins de petits vignerons, au 97 avenue de Versailles.</p>
-    <div class="boutons centre">
+    <h1>Le bistrot du coin. <em>Celui où l'on revient.</em></h1>
+    <p>Les Coltineurs, restaurant de quartier au 97 avenue de Versailles, dans le 16ᵉ. Gabin en cuisine, Nicolas en salle, une carte qui suit le marché et des vins de vignerons qu'on connaît.</p>
+    <div class="boutons">
       <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
-      <a class="bouton bouton--lien" href="/menu/">Voir le menu</a>
-    </div>
-    <p class="hero__ouverture">Ouvert du mardi au samedi, 12h – 14h30 et 18h30 – 23h</p>
-  </div>
-  <div class="conteneur hero__image">
-    {% image "salle-coltineurs.jpg", "Salle du restaurant Les Coltineurs à Paris 16e : banquette en velours vert, tables en bois, murs couverts de cadres anciens et sol en mosaïque", "(max-width: 76rem) 100vw, 76rem", [640, 1080, 1600, 2400], "eager" %}
-  </div>
-</section>
-
-<section class="section section--vert">
-  <div class="conteneur">
-    <p class="surtitre centre">La maison</p>
-    <h2 class="centre">Gabin et Nicolas, <em>deux aubergistes avenue de Versailles</em></h2>
-    <p class="intro">Les Coltineurs, c'est l'histoire de deux associés et de vrais aubergistes, au sens le plus noble du terme : de ceux qui aiment nourrir, servir et recevoir, et pour qui un bon repas est d'abord un moment partagé.</p>
-    <div class="aubergistes">
-      <article class="fiche">
-        <p class="surtitre">En cuisine</p>
-        <h3>Gabin Jarry</h3>
-        <p>Gabin sélectionne les meilleurs produits, au plus près des saisons : viandes de caractère, poissons de petite pêche, légumes de beaux maraîchers, fromages affinés. Il les travaille avec respect et générosité, pour des assiettes franches, gourmandes, qui ont du goût et du cœur.</p>
-      </article>
-      <article class="fiche">
-        <p class="surtitre">En salle</p>
-        <h3>Nicolas Estivin</h3>
-        <p>Nicolas a le sens inné de l'accueil et du service. Il connaît ses habitués par leur prénom, devine la table qui vous ira, raconte les plats et les vignerons, et veille à ce que chaque client reparte avec l'envie de revenir.</p>
-      </article>
+      <a class="bouton--lien" href="/menu/">Voir la carte</a>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="border-top:0">
   <div class="conteneur duo">
-    <div>
-      {% image "plat-ris-de-veau-morilles.jpg", "Cœur de ris de veau doré et sauce crémée aux morilles, plat du restaurant Les Coltineurs", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
+    <div class="photo-nb">
+      {% image "salle-interieur.jpg", "La salle des Coltineurs, avenue de Versailles, ses banquettes et ses cadres", "(max-width: 52rem) 100vw, 55vw", [480, 800, 1080] %}
     </div>
     <div>
-      <p class="surtitre">L'ardoise du moment</p>
-      <h2>Une cuisine de bistrot français, <em>généreuse et de saison</em></h2>
-      <p>La carte change au fil des saisons, des arrivages et des coups de cœur de Gabin.</p>
-      {%- set apercu = menu | ardoise %}
-      {%- if apercu.length %}
-      <ul class="ardoise__plats">
-        {%- for p in apercu %}
-        <li><span>{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span>{{ p.prix }}</span></li>
-        {%- endfor %}
-      </ul>
-      {%- endif %}
-      <a class="bouton bouton--lien" href="/menu/">Tout le menu</a>
+      <h2>La maison</h2>
+      <p class="grand-texte">Avant nous, c'était un bistrot de bougnats, à deux pas de la Maison de la Radio. On a gardé les banquettes, les cadres aux murs et le carrelage. Le reste, c'est nous.</p>
+      <p>Gabin a repris l'adresse en 2019. Il est breton, et ça se sent dans l'assiette : la mer y croise souvent la terre, comme dans les couteaux au chorizo ou le ris de veau au homard. Nicolas tient la salle. Il vous trouvera une table, vous parlera du vigneron de la bouteille et se souviendra de votre prénom la fois suivante.</p>
+      <p class="label">Les Coltineurs · 97 avenue de Versailles · Paris 16ᵉ</p>
+      <a class="lien-fleche" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver une table</a>
     </div>
   </div>
 </section>
 
 <section class="section section--sable">
-  <div class="conteneur duo duo--inverse">
-    <div>
-      {% image "plat-homard-tagliatelles.jpg", "Homard bleu rôti sur des tagliatelles, sauce mousseuse et cerfeuil", "(max-width: 50rem) 100vw, 40vw", [400, 800] %}
-    </div>
-    <div>
-      <p class="surtitre">La cave de Nicolas</p>
-      <h2>Des vins de petits vignerons, <em>choisis avec soin</em></h2>
-      <p>Notre carte des vins est exclusivement tournée vers de petits vignerons qui respectent une agriculture et une vinification saines : champagnes, Loire, Bourgogne, Beaujolais, Rhône, Languedoc.</p>
-      <p>En salle, Nicolas aime raconter les domaines qu'il sert : laissez-vous guider pour trouver la bouteille qui accompagnera les plats de Gabin.</p>
-      <a class="bouton bouton--lien" href="/carte-des-vins/">La carte des vins</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="conteneur duo">
-    <div>
-      <p class="surtitre">Événements</p>
-      <h2>Groupes et privatisation <em>dans le 16ᵉ</em></h2>
-      <p>Anniversaire, repas d'entreprise, fête de famille : privatisez le restaurant entier tous les jours de la semaine, midi ou soir, à partir de 1 500 €. Nous accueillons aussi les groupes avec une formule adaptée.</p>
-      <div class="boutons">
-        <a class="bouton" href="/privatisation/">Privatiser Les Coltineurs</a>
-      </div>
-    </div>
-    <div>
-      {% image "illustration-salle-aquarelle.jpg", "Aquarelle de la salle des Coltineurs, bistrot de l'avenue de Versailles, un soir de service", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1200] %}
-    </div>
-  </div>
-</section>
-
-<section class="section section--vert" id="infos">
   <div class="conteneur">
-    <p class="surtitre">Infos pratiques</p>
-    <h2>Venir aux Coltineurs, <em>avenue de Versailles</em></h2>
-    <div class="infos">
-      <div>
-        <h3>Adresse</h3>
-        <p>{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}</p>
-        <p>Paris 16ᵉ, quartier d'Auteuil<br>Métro Mirabeau ou Église d'Auteuil (ligne 10)</p>
-        <p><a href="{{ site.carte }}" rel="noopener">Voir sur le plan</a></p>
-      </div>
-      <div>
-        <h3>Horaires</h3>
-        <table class="horaires">
-          <caption class="sr">Horaires d'ouverture</caption>
-          <tbody>
-          {%- for h in site.horaires %}
-            <tr{% if not h.services.length %} class="ferme"{% endif %}>
-              <th scope="row">{{ h.jour }}</th>
-              <td>{% if h.services.length %}{% for s in h.services %}{{ s[0] | heure }} – {{ s[1] | heure }}{% if not loop.last %} · {% endif %}{% endfor %}{% else %}Fermé{% endif %}</td>
-            </tr>
-          {%- endfor %}
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <h3>Réservations</h3>
-        <p>Déjeuner et dîner, en ligne ou par téléphone au <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a>.</p>
-        <div class="boutons">
-          <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver</a>
-          <a class="bouton" href="/privatisation/">Groupes et privatisation</a>
-        </div>
-        <p style="margin-top:1.5rem"><a href="{{ site.homardVolant }}" rel="noopener">Traiteur et événements : Le Homard Volant, le service traiteur des Coltineurs</a></p>
+    <h2 class="centre">Un aperçu de la carte</h2>
+    <p class="intro centre" style="margin:0 auto">Une partie seulement de ce qu'on sert en ce moment. La carte change avec le marché : pour tout voir, cliquez sur « Voir toute la carte ».</p>
+    {%- set apercu = menu | ardoise(10) %}
+    <div class="ardoise">
+      <ul class="apercu">
+        {%- for p in apercu %}
+        <li><span class="nom">{{ p.nom }}</span>{% if p.detail %}<span class="detail">{{ p.detail }}</span>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      <p class="ardoise__note">… et {{ (menu | nbPlats) - apercu.length }} autres plats sur la carte complète.</p>
+      <div class="boutons centre" style="margin-top:1.5rem">
+        <a class="bouton bouton--plein" href="/menu/">Voir toute la carte</a>
+        <a class="lien-fleche" href="/carte-des-vins/">La carte des vins</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--papier presse-bandeau">
-  <div class="conteneur centre">
-    <p class="surtitre">Ils parlent de nous</p>
-    <p class="presse-bandeau__noms">Le Parisien · Marie Claire · Gilles Pudlowski · Mensup · Bonjour Paris</p>
-    <a class="bouton bouton--lien" href="/presse/">Lire la presse</a>
+<section class="section">
+  <div class="conteneur bloc-liste">
+    <div>
+      <h2>Pour vos tablées</h2>
+      <p class="intro">Un anniversaire, un dîner d'équipe, la famille au complet : la salle peut être à vous, tous les jours, midi ou soir. Et pour recevoir chez vous ou au bureau, notre traiteur s'appelle Le Homard Volant.</p>
+      <a class="lien-fleche" href="/privatisation/">Privatiser la salle</a>
+    </div>
+    <ul class="lignes">
+      <li><a class="titre" href="/privatisation/">Privatisation</a><span class="desc">Toute la salle, à partir de 1 500 €</span></li>
+      <li><a class="titre" href="/privatisation/">Repas de groupe</a><span class="desc">Sans privatiser, menu adapté</span></li>
+      <li><a class="titre" href="{{ site.homardVolant }}" rel="noopener">Traiteur</a><span class="desc">Le Homard Volant, chez vous, de 2 à 300 convives</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="infos">
+  <div class="conteneur bloc-liste">
+    <h2>En pratique</h2>
+    <div class="pratique">
+      <div><strong>Mar. → sam.</strong><span>midi et soir, fermé dimanche et lundi</span></div>
+      <div><strong>12h – 14h30</strong><span>le déjeuner</span></div>
+      <div><strong>18h30 – 23h</strong><span>le dîner</span></div>
+      <div><strong>Ligne 10</strong><span>métro Mirabeau ou Église d'Auteuil, quartier d'Auteuil</span></div>
+      <div><strong>En ligne</strong><span>ou au <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a> pour réserver</span></div>
+      <div><strong>1 500 €</strong><span>pour privatiser la salle, tous les jours</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sable">
+  <div class="conteneur bloc-liste">
+    <div>
+      <h2>Ils en ont parlé</h2>
+      <a class="lien-fleche" href="/presse/">Toute la presse</a>
+    </div>
+    <ul class="citations">
+      {%- for a in presse | batch(4) | first %}{% if a.citation %}
+      <li><blockquote{% if a.langue %} lang="{{ a.langue }}"{% endif %}>« {{ a.citation }} »</blockquote><cite>{{ a.media }}</cite></li>
+      {%- endif %}{% endfor %}
+    </ul>
   </div>
 </section>
 
 <section class="section">
-  <div class="conteneur etroit faq">
-    <p class="surtitre centre">Questions fréquentes</p>
-    <h2 class="centre">Bon à savoir avant de venir</h2>
-    {%- for q in faq %}
-    <details>
-      <summary>{{ q.question }}</summary>
-      <p>{{ q.reponse }}</p>
-    </details>
-    {%- endfor %}
+  <div class="conteneur bloc-liste">
+    <h2>Bon à savoir</h2>
+    <div class="faq">
+      {%- for q in faq %}
+      <details>
+        <summary>{{ q.question }}</summary>
+        <p>{{ q.reponse }}</p>
+      </details>
+      {%- endfor %}
+    </div>
   </div>
 </section>
 <script type="application/ld+json">{{ faq | faqSchema | json | safe }}</script>
+
+<section class="section section--sombre">
+  <div class="conteneur final">
+    <div>
+      <h2>Une table ce soir&nbsp;?</h2>
+      <p>Réservez en ligne en deux minutes, ou appelez-nous au <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a>.</p>
+      <div class="boutons">
+        <a class="bouton bouton--clair" href="{{ site.zenchef.reserver }}" rel="noopener">Réserver</a>
+        <a class="bouton" href="{{ site.carte }}" rel="noopener">Itinéraire</a>
+      </div>
+    </div>
+    <div class="final__infos">
+      <p>{{ site.adresse.rue }}, {{ site.adresse.codePostal }} {{ site.adresse.ville }}<br>Métro Mirabeau ou Église d'Auteuil</p>
+      <p>Du mardi au samedi, 12h – 14h30 et 18h30 – 23h</p>
+    </div>
+  </div>
+</section>

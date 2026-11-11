@@ -34,7 +34,7 @@ ogImage: plat-ris-de-veau-morilles.jpg
     <h2 class="centre">Le ris de veau au menu</h2>
     <ul class="ardoise__plats">
       {%- for p in plats %}
-      <li><span>{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span>{{ p.prix }}</span></li>
+      <li><span class="nom">{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span class="prix">{{ p.prix }}</span></li>
       {%- endfor %}
     </ul>
     <p class="centre" style="margin-top:1.5rem; color: var(--gris)">La carte change au fil des saisons : appelez-nous pour savoir ce que Gabin prépare cette semaine.</p>
