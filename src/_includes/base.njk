@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/cormorant-500-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/figtree-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v={{ version }}">
   {%- if jsonld == "restaurant" %}{% set ld = schema %}{% elif jsonld == "menu" %}{% set ld = menu | menuSchema %}{% elif jsonld == "vins" %}{% set ld = vins | vinsSchema %}{% endif %}
   {% if ld %}<script type="application/ld+json">{{ ld | json | safe }}</script>{% endif %}
 </head>
@@ -94,7 +94,7 @@
       <button type="button" class="bouton" data-consentement="accepte">{{ t.consentement.accepter }}</button>
     </div>
   </div>
-  <script src="/js/consentement.js" defer></script>
+  <script src="/js/consentement.js?v={{ version }}" defer></script>
   {%- endif %}
 </body>
 </html>
