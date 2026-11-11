@@ -146,6 +146,11 @@ export default function (eleventyConfig) {
     (menu?.categories || []).flatMap((c) => c.sousCategories.flatMap((s) => s.plats))
       .filter((p) => sansAccent(p.nom).includes(sansAccent(mot)))
   );
+  // Nombre de plats à la carte (hors boissons), pour l'aperçu de l'accueil.
+  eleventyConfig.addFilter("nbPlats", (menu) =>
+    (menu?.categories || []).filter((c) => !/boisson/i.test(c.nom))
+      .reduce((n, c) => n + c.sousCategories.reduce((m, s) => m + s.plats.length, 0), 0)
+  );
   eleventyConfig.addFilter("isoDate", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addFilter("annee", () => new Date().getFullYear());
 
@@ -156,9 +161,10 @@ export default function (eleventyConfig) {
     "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-400-normal.woff2": "/fonts/cormorant-400-normal.woff2",
     "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-400-italic.woff2": "/fonts/cormorant-400-italic.woff2",
     "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-normal.woff2": "/fonts/cormorant-500-normal.woff2",
-    "node_modules/@fontsource/jost/files/jost-latin-300-normal.woff2": "/fonts/jost-300-normal.woff2",
-    "node_modules/@fontsource/jost/files/jost-latin-400-normal.woff2": "/fonts/jost-400-normal.woff2",
-    "node_modules/@fontsource/jost/files/jost-latin-500-normal.woff2": "/fonts/jost-500-normal.woff2",
+    "node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-italic.woff2": "/fonts/cormorant-500-italic.woff2",
+    "node_modules/@fontsource/figtree/files/figtree-latin-400-normal.woff2": "/fonts/figtree-400-normal.woff2",
+    "node_modules/@fontsource/figtree/files/figtree-latin-500-normal.woff2": "/fonts/figtree-500-normal.woff2",
+    "node_modules/@fontsource/figtree/files/figtree-latin-600-normal.woff2": "/fonts/figtree-600-normal.woff2",
   });
 
   eleventyConfig.addFilter("json", (v) => JSON.stringify(v, null, 2).replace(/</g, "\\u003c"));
