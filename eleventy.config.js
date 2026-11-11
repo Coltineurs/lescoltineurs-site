@@ -55,6 +55,8 @@ async function buildFixedJpegs() {
 }
 
 export default function (eleventyConfig) {
+  // Numéro de version pour forcer les navigateurs à recharger CSS et JS après chaque publication
+  eleventyConfig.addGlobalData("version", String(Date.now()));
   eleventyConfig.addAsyncShortcode("image", image);
   eleventyConfig.addAsyncShortcode("imageUrl", imageUrl);
   eleventyConfig.on("eleventy.before", buildFixedJpegs);
