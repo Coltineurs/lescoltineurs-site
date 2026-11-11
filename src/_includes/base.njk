@@ -24,11 +24,11 @@
   <meta property="og:url" content="{{ canonical }}">
   <meta property="og:image" content="{{ (ogImage or 'salle-interieur.jpg') | imageUrlSync | absolute(site.url) }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0E3B2E">
+  <meta name="theme-color" content="#FAF6EE">
   <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preload" href="/fonts/cormorant-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/jost-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/cormorant-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/figtree-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
   {%- if jsonld == "restaurant" %}{% set ld = schema %}{% elif jsonld == "menu" %}{% set ld = menu | menuSchema %}{% elif jsonld == "vins" %}{% set ld = vins | vinsSchema %}{% endif %}
   {% if ld %}<script type="application/ld+json">{{ ld | json | safe }}</script>{% endif %}
@@ -62,33 +62,29 @@
 
   <footer class="pied">
     <div class="pied__inner">
-      <div class="pied__bloc">
+      <div>
         <p class="pied__nom">Les Coltineurs</p>
         <p>{{ t.pied.presentation | safe }}</p>
       </div>
-      <div class="pied__bloc">
-        <h2>{{ t.pied.trouver }}</h2>
-        <address>
-          <a href="{{ site.carte }}" rel="noopener">{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}</a><br>
-          <a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a>
-        </address>
-      </div>
-      <div class="pied__bloc">
-        <h2>{{ t.pied.horaires }}</h2>
+      <div>
+        <p>{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}<br>{{ t.pied.metro }}</p>
         <p>{{ t.pied.horairesTexte | safe }}</p>
       </div>
-      <div class="pied__bloc">
-        <h2>{{ t.pied.suivre }}</h2>
-        <p><a href="{{ site.instagram }}" rel="noopener">Instagram @lescoltineurs</a>
-        {%- for l in t.pied.liens %}<br>
-        <a href="{{ site.zenchef.reserver if l.url == 'zenchef' else l.url }}"{% if l.url == 'zenchef' %} rel="noopener"{% endif %}>{{ l.titre }}</a>
-        {%- endfor %}
-        {%- if site.carteCadeau %}<br>
-        <a href="{{ site.carteCadeau }}" rel="noopener">{{ "Gift card" if t.langue == "en" else "Offrir une carte cadeau" }}</a>{% endif %}<br>
-        <a href="{{ site.homardVolant }}" rel="noopener">{{ t.pied.traiteur }}</a></p>
+      <div>
+        <p><a href="tel:{{ site.telephoneIntl }}">{{ site.telephone }}</a><br>
+        <a href="mailto:{{ site.emailContact }}">{{ site.emailContact }}</a><br>
+        <a href="{{ site.instagram }}" rel="noopener">Instagram</a></p>
+        <p><a href="{{ site.homardVolant }}" rel="noopener">{{ t.pied.traiteur }}</a></p>
       </div>
     </div>
-    <p class="pied__legal"><a href="/mentions-legales/">{{ t.pied.mentions }}</a> · {% if site.googleAds or site.googleAnalytics %}<button type="button" class="lien" data-consentement="gerer">{{ t.pied.cookies }}</button> · {% endif %} © {{ "now" | annee }} Les Coltineurs</p>
+    <nav class="pied__liens" aria-label="{{ t.pied.plan }}">
+      {%- for l in t.pied.liens %}
+      <a href="{{ site.zenchef.reserver if l.url == 'zenchef' else l.url }}"{% if l.url == 'zenchef' %} rel="noopener"{% endif %}>{{ l.titre }}</a>
+      {%- endfor %}
+      {%- if site.carteCadeau %}<a href="{{ site.carteCadeau }}" rel="noopener">{{ "Gift card" if t.langue == "en" else "Carte cadeau" }}</a>{% endif %}
+      <a href="/mentions-legales/">{{ t.pied.mentions }}</a>
+      {%- if site.googleAds or site.googleAnalytics %}<button type="button" class="lien" data-consentement="gerer">{{ t.pied.cookies }}</button>{% endif %}
+    </nav>
   </footer>
   {%- if site.googleAds or site.googleAnalytics %}
   <div id="consentement" class="consentement" role="dialog" aria-live="polite" aria-label="Cookies" data-google-ads="{{ site.googleAds }}" data-google-analytics="{{ site.googleAnalytics }}" hidden>
