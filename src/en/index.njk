@@ -9,127 +9,110 @@ description: "Les Coltineurs, a neighbourhood French bistro at 97 avenue de Vers
 jsonld: restaurant
 ---
 <section class="hero">
+  <div class="hero__image">
+    {% image "salle-coltineurs.jpg", "The dining room at Les Coltineurs: green velvet banquette, wooden tables, old framed pictures and a mosaic floor", "100vw", [640, 1080, 1600, 2400], "eager" %}
+  </div>
   <div class="conteneur hero__texte">
-    <p class="surtitre">Restaurant · French bistro · Paris 16th · Avenue de Versailles</p>
-    <h1>Les Coltineurs, a neighbourhood bistro <em>where you feel expected</em></h1>
-    <span class="filet" aria-hidden="true"></span>
-    <p class="chapo">Gabin in the kitchen, Nicolas in the dining room: two true innkeepers, generous seasonal French cooking and wines from small growers, at 97 avenue de Versailles by the Maison de la Radio, not far from the Eiffel Tower.</p>
-    <div class="boutons centre">
+    <h1>The bistro on the corner. <em>The one you come back to.</em></h1>
+    <p>Les Coltineurs is a neighbourhood restaurant at 97 avenue de Versailles, in Paris 16th, by the Maison de la Radio and not far from the Eiffel Tower. Gabin cooks, Nicolas runs the room, the menu follows the market and the wines come from growers we know.</p>
+    <div class="boutons">
       <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
-      <a class="bouton bouton--lien" href="/en/menu/">See the menu</a>
-    </div>
-    <p class="hero__ouverture">Open Tuesday to Saturday, 12pm – 2:30pm and 6:30pm – 11pm</p>
-  </div>
-  <div class="conteneur hero__image">
-    {% image "salle-coltineurs.jpg", "The dining room at Les Coltineurs, Paris 16th: green velvet banquette, wooden tables, walls lined with old framed pictures and a mosaic floor", "(max-width: 76rem) 100vw, 76rem", [640, 1080, 1600, 2400], "eager" %}
-  </div>
-</section>
-
-<section class="section section--vert">
-  <div class="conteneur">
-    <p class="surtitre centre">The house</p>
-    <h2 class="centre">Gabin and Nicolas, <em>two innkeepers on avenue de Versailles</em></h2>
-    <p class="intro">Les Coltineurs is the story of two partners and true innkeepers, in the noblest sense of the word: people who love to feed, to serve and to welcome, and for whom a good meal is above all a moment shared.</p>
-    <div class="aubergistes">
-      <article class="fiche">
-        <p class="surtitre">In the kitchen</p>
-        <h3>Gabin Jarry</h3>
-        <p>Gabin picks the finest produce, as close to the seasons as possible, and cooks it with respect and generosity: honest, hearty plates with real flavour and real heart. He loves bringing land and sea together, from razor clams with chorizo to veal sweetbreads with blue lobster.</p>
-      </article>
-      <article class="fiche">
-        <p class="surtitre">In the dining room</p>
-        <h3>Nicolas Estivin</h3>
-        <p>Nicolas has a natural gift for hospitality. He knows his regulars by name, finds the table that suits you, tells the story behind each dish and each winemaker, and makes sure every guest leaves wanting to come back.</p>
-      </article>
+      <a class="bouton--lien" href="/en/menu/">See the menu</a>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="border-top:0">
   <div class="conteneur duo">
-    <div>
-      {% image "plat-ris-de-veau-morilles.jpg", "Golden veal sweetbread heart with a creamy morel sauce, at Les Coltineurs", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1080] %}
+    <div class="photo-nb">
+      {% image "salle-interieur.jpg", "The dining room at Les Coltineurs, with its banquettes and framed pictures", "(max-width: 52rem) 100vw, 55vw", [480, 800, 1080] %}
     </div>
     <div>
-      <p class="surtitre">On the board right now</p>
-      <h2>Classic French bistro cooking, <em>generous and seasonal</em></h2>
-      <p>The menu changes with the seasons, the market and Gabin's latest favourites. Dish names are in French: just ask, Nicolas and the team will happily explain everything in English.</p>
-      {%- set apercu = menu | ardoise %}
-      {%- if apercu.length %}
-      <ul class="ardoise__plats">
-        {%- for p in apercu %}
-        <li><span lang="fr">{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span>{{ p.prix }}</span></li>
-        {%- endfor %}
-      </ul>
-      {%- endif %}
-      <a class="bouton bouton--lien" href="/en/menu/">Full menu</a>
+      <h2>The house</h2>
+      <p class="grand-texte">Before us, this was an old Auvergnat café, a stone's throw from the Maison de la Radio. We kept the banquettes, the pictures on the walls and the tiled floor. The rest is us.</p>
+      <p>Gabin took over in 2019. He is from Brittany, and it shows on the plate: sea and land often meet, as in the razor clams with chorizo or the sweetbreads with blue lobster. Nicolas runs the dining room. He will find you a table, tell you about the winemaker behind your bottle and remember your name next time. Dish names are in French: just ask, we are happy to explain in English.</p>
+      <p class="label">Les Coltineurs · 97 avenue de Versailles · Paris 16th</p>
+      <a class="lien-fleche" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
     </div>
   </div>
 </section>
 
 <section class="section section--sable">
-  <div class="conteneur duo duo--inverse">
-    <div>
-      {% image "plat-homard-tagliatelles.jpg", "Roasted blue lobster on tagliatelle with a frothy sauce", "(max-width: 50rem) 100vw, 40vw", [400, 800] %}
-    </div>
-    <div>
-      <p class="surtitre">Nicolas's cellar</p>
-      <h2>Wines from small growers, <em>chosen with care</em></h2>
-      <p>Our wine list is devoted entirely to small, independent winemakers who farm and make their wines with care: Champagne, Loire, Burgundy, Beaujolais, Rhône, Languedoc and a few friends from Italy.</p>
-      <p>In the dining room, Nicolas loves to talk about the estates he pours: let him guide you to the right bottle for Gabin's cooking.</p>
-      <a class="bouton bouton--lien" href="/en/wine-list/">The wine list</a>
+  <div class="conteneur">
+    <h2 class="centre">A taste of the menu</h2>
+    <p class="intro centre" style="margin:0 auto">Just a part of what we are serving right now. The menu changes with the market: click “See the full menu” to see everything.</p>
+    {%- set apercu = menu | ardoise(10) %}
+    <div class="ardoise">
+      <ul class="apercu">
+        {%- for p in apercu %}
+        <li><span class="nom" lang="fr">{{ p.nom }}</span>{% if p.detail %}<span class="detail" lang="fr">{{ p.detail }}</span>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      <p class="ardoise__note">… and {{ (menu | nbPlats) - apercu.length }} more dishes on the full menu.</p>
+      <div class="boutons centre" style="margin-top:1.5rem">
+        <a class="bouton bouton--plein" href="/en/menu/">See the full menu</a>
+        <a class="lien-fleche" href="/en/wine-list/">Wine list</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="conteneur duo">
+  <div class="conteneur bloc-liste">
     <div>
-      <p class="surtitre">Events</p>
-      <h2>Groups and private hire <em>in Paris 16th</em></h2>
-      <p>Birthday, company dinner, family celebration: book the whole restaurant any day of the week, lunch or dinner, from €1,500. We also welcome groups with a tailored menu.</p>
+      <h2>For bigger tables</h2>
+      <p class="intro">A birthday, a team dinner, the whole family: the room can be yours any day, lunch or dinner. And to host at home or at the office, our catering service is called Le Homard Volant.</p>
+      <a class="lien-fleche" href="/en/private-events/">Private hire</a>
+    </div>
+    <ul class="lignes">
+      <li><a class="titre" href="/en/private-events/">Private hire</a><span class="desc">The whole room, from €1,500</span></li>
+      <li><a class="titre" href="/en/private-events/">Group meals</a><span class="desc">Without private hire, tailored menu</span></li>
+      <li><a class="titre" href="{{ site.homardVolant }}" rel="noopener">Catering</a><span class="desc">Le Homard Volant, at your place, 2 to 300 guests</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="infos">
+  <div class="conteneur bloc-liste">
+    <h2>Practical</h2>
+    <div class="pratique">
+      <div><strong>Tue → Sat</strong><span>lunch and dinner, closed Sunday and Monday</span></div>
+      <div><strong>12 – 2:30pm</strong><span>lunch</span></div>
+      <div><strong>6:30 – 11pm</strong><span>dinner</span></div>
+      <div><strong>Line 10</strong><span>metro Mirabeau or Église d'Auteuil</span></div>
+      <div><strong>Online</strong><span>or call <a href="tel:{{ site.telephoneIntl }}">+33 1 45 27 15 74</a> to book</span></div>
+      <div><strong>€1,500</strong><span>to book the whole room, any day</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sable">
+  <div class="conteneur bloc-liste">
+    <div>
+      <h2>As seen in</h2>
+      <a class="lien-fleche" href="/en/press/">All the press</a>
+    </div>
+    <ul class="citations">
+      {%- for a in presse | batch(4) | first %}{% if a.citation %}
+      <li><blockquote lang="{{ a.langue or 'fr' }}">“{{ a.citation }}”</blockquote><cite>{{ a.media }}</cite></li>
+      {%- endif %}{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--sombre">
+  <div class="conteneur final">
+    <div>
+      <h2>A table tonight?</h2>
+      <p>Book online in two minutes, or call us on <a href="tel:{{ site.telephoneIntl }}">+33 1 45 27 15 74</a>.</p>
       <div class="boutons">
-        <a class="bouton" href="/en/private-events/">Private events</a>
+        <a class="bouton bouton--clair" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
+        <a class="bouton" href="{{ site.carte }}" rel="noopener">Directions</a>
       </div>
     </div>
-    <div>
-      {% image "illustration-salle-aquarelle.jpg", "Watercolour of the dining room at Les Coltineurs on a busy evening", "(max-width: 50rem) 100vw, 40vw", [480, 800, 1200] %}
+    <div class="final__infos">
+      <p>{{ site.adresse.rue }}, {{ site.adresse.codePostal }} {{ site.adresse.ville }}<br>Metro Mirabeau or Église d'Auteuil</p>
+      <p>Tuesday to Saturday, 12pm – 2:30pm and 6:30pm – 11pm</p>
     </div>
-  </div>
-</section>
-
-<section class="section section--vert" id="infos">
-  <div class="conteneur">
-    <p class="surtitre">Practical information</p>
-    <h2>Getting to Les Coltineurs, <em>avenue de Versailles</em></h2>
-    <div class="infos">
-      <div>
-        <h3>Address</h3>
-        <p>{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}, France</p>
-        <p>Paris 16th, Auteuil district<br>Metro Mirabeau or Église d'Auteuil (line 10)<br>Near the Maison de la Radio, a short ride from the Eiffel Tower</p>
-        <p><a href="{{ site.carte }}" rel="noopener">Open in Maps</a></p>
-      </div>
-      <div>
-        <h3>Opening hours</h3>
-        <p>Tuesday to Saturday<br>Lunch 12pm – 2:30pm<br>Dinner 6:30pm – 11pm<br>Closed Sunday and Monday</p>
-      </div>
-      <div>
-        <h3>Reservations</h3>
-        <p>Lunch and dinner, online or by phone on <a href="tel:{{ site.telephoneIntl }}">+33 1 45 27 15 74</a>.</p>
-        <div class="boutons">
-          <a class="bouton bouton--plein" href="{{ site.zenchef.reserver }}" rel="noopener">Book a table</a>
-          <a class="bouton" href="/en/private-events/">Groups and private hire</a>
-        </div>
-        <p style="margin-top:1.5rem"><a href="{{ site.homardVolant }}" rel="noopener">Catering and events: Le Homard Volant, the Coltineurs catering service</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--papier presse-bandeau">
-  <div class="conteneur centre">
-    <p class="surtitre">As seen in</p>
-    <p class="presse-bandeau__noms">Le Parisien · Marie Claire · Gilles Pudlowski · Mensup · Bonjour Paris</p>
-    <a class="bouton bouton--lien" href="/en/press/">Read the press</a>
   </div>
 </section>

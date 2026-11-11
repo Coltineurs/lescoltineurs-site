@@ -34,7 +34,7 @@ ogImage: salle-coltineurs.jpg
     <p class="surtitre centre">On the menu right now</p>
     <ul class="ardoise__plats">
       {%- for p in plats %}
-      <li><span lang="fr">{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span>{{ p.prix }}</span></li>
+      <li><span class="nom" lang="fr">{{ p.nom }}</span><span class="points" aria-hidden="true"></span><span class="prix">{{ p.prix }}</span></li>
       {%- endfor %}
     </ul>
   </div>
