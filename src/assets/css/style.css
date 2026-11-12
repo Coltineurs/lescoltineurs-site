@@ -268,3 +268,6 @@ a.titre { text-decoration: underline; text-decoration-color: var(--vert); text-d
 .consentement p { margin: 0 0 0.9rem; }
 .consentement__boutons { display: flex; gap: 0.6rem; justify-content: flex-end; flex-wrap: wrap; }
 .consentement .bouton { padding: 0.7rem 1.2rem; }
+
+/* Chiffres alignés partout (Cormorant affiche sinon des chiffres « anciens » : 1 ressemble à I) */
+body, h1, h2, h3, .grand-texte, .pratique strong { font-variant-numeric: lining-nums; }
