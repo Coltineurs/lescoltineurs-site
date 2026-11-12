@@ -271,3 +271,6 @@ a.titre { text-decoration: underline; text-decoration-color: var(--vert); text-d
 
 /* Chiffres alignés partout (Cormorant affiche sinon des chiffres « anciens » : 1 ressemble à I) */
 body, h1, h2, h3, .grand-texte, .pratique strong { font-variant-numeric: lining-nums; }
+
+/* Photo de plat (accueil, « La maison ») : cadrage 4/5 */
+.photo-plat img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 18% 55%; }
